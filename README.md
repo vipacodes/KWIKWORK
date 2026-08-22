@@ -101,7 +101,7 @@ each deployment, and you can roll back to any previous version.
 
 ## ⚠️ Critical for the US edition — set up your email
 
-Every "Apply by Email" button and the contact form sends to
+Employer inquiries and the general contact form go to
 **support@kwikwork.online**. That mailbox must actually exist or you will never
 see an application:
 
@@ -138,8 +138,10 @@ Open `index.html` in any text editor (Notepad works) and change:
 
 ## How the site works (no backend needed)
 
-- **Applications open the visitor's email app** with everything pre-filled —
-  resumes land in your `hello@` inbox. No server or database needed.
+- **Job applications go through the Fillout form**
+  (https://forms.fillout.com/t/kLSRLen5kjus) — every applicant must complete
+  it, whichever button they click. Responses appear in your Fillout dashboard.
+  Employer requests and general contact still use email.
 - To add a job: copy one entry in the `JOBS` list, change the details, save,
   re-upload. It appears instantly on the site.
 

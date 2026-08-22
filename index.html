@@ -572,7 +572,7 @@
     <div class="section-head reveal">
       <span class="eyebrow">Current openings</span>
       <h2>Open office positions</h2>
-      <p>Most roles are fully remote — work from anywhere in the US. Apply by email, attach your resume, and most employers respond within two business days.</p>
+      <p>Most roles are fully remote — work from anywhere in the US. Apply with our short application form (about 2 minutes) — most employers respond within two business days.</p>
     </div>
 
     <div class="filters reveal">
@@ -616,7 +616,7 @@
         <p>Four steps between you and your next role.</p>
         <ol class="steps">
           <li><span class="step-n">1</span><div><b>Browse open roles</b><span>Filter by specialty, location, and employment type — new jobs weekly.</span></div></li>
-          <li><span class="step-n">2</span><div><b>Apply by email</b><span>Tap “Apply by email” and your mail app opens pre-addressed. Attach your resume and send — no accounts, no repeated forms.</span></div></li>
+          <li><span class="step-n">2</span><div><b>Complete the application form</b><span>Tap “Apply now” and fill in the short form — your details, experience, and resume. About 2 minutes, no account needed. Every applicant provides the same required details.</span></div></li>
           <li><span class="step-n">3</span><div><b>Get shortlisted</b><span>Employers respond within two business days on average.</span></div></li>
           <li><span class="step-n">4</span><div><b>Interview &amp; start</b><span>We follow up to make sure the placement goes smoothly.</span></div></li>
         </ol>
@@ -732,7 +732,7 @@
       </details>
       <details class="faq">
         <summary>How do I apply for a role?</summary>
-        <div class="faq-body">Tap “Apply by email” on any listing. Your email app opens pre-addressed to our recruitment team — attach your resume and send. We forward complete applications to the employer the same day.</div>
+        <div class="faq-body">Tap “Apply now” on any listing and complete the short application form (about 2 minutes). Every applicant provides the same required details — so nothing is missed. We forward complete applications to the employer the same day.</div>
       </details>
       <details class="faq">
         <summary>How quickly can employers see candidates?</summary>
@@ -784,7 +784,7 @@
 
       <form class="contact-form reveal" id="contactForm">
         <h3>Send us a message</h3>
-        <p>Complete the form and your email app opens with your message ready to send.</p>
+        <p>Job seekers are taken straight to our application form; employer and general inquiries go by email.</p>
         <div class="form-row">
           <div class="field">
             <label for="cfName">Full name</label>
@@ -808,7 +808,7 @@
           <textarea id="cfMessage" placeholder="Tell us more…" required></textarea>
         </div>
         <button class="btn btn-navy btn-block" type="submit">Send by email</button>
-        <p class="form-note">Opens your email app pre-filled — nothing is stored on this website.</p>
+        <p class="form-note">Job seekers: you’ll be redirected to the application form (required). Email opens for employer and general inquiries.</p>
       </form>
     </div>
   </div>
@@ -878,6 +878,7 @@
 
 var SITE_EMAIL = "support@kwikwork.online";
 var SITE_PHONE = "+18322688854";
+var APPLY_FORM = "https://forms.fillout.com/t/kLSRLen5kjus"; // required application form — all applicants go through this
 
 var JOBS = [
   { title: "Virtual Receptionist", company: "Sapphire Consulting Group", location: "Remote", category: "Front Desk & Reception", type: "Remote", salary: "$20 – $22 /hr", posted: "2 days ago", desc: "Answer calls, route inquiries and manage appointment scheduling from home. Clear phone manner, quiet workspace and reliable high-speed internet required." },
@@ -918,9 +919,7 @@ function initials(name) {
     .slice(0, 2).map(function (w) { return w[0].toUpperCase(); }).join("") || "KW";
 }
 function applyLink(job) {
-  var subject = "Application: " + job.title + " — " + job.company;
-  var body = "Hello KwikWork,\n\nI would like to apply for the " + job.title + " position at " + job.company + " (" + job.location + "). Please find my resume attached.\n\nName:\nPhone:\n\nBest regards,";
-  return "mailto:" + SITE_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  return APPLY_FORM;
 }
 
 /* ---------- render category cards ---------- */
@@ -975,7 +974,7 @@ function renderJobs() {
       '<div class="job-co">' + I_BUILDING + " " + j.company + ' <span class="sep">·</span> ' + I_PIN + " " + j.location + "</div>" +
       '<p class="job-desc">' + j.desc + "</p>" +
       '<div class="job-meta"><span class="job-salary">' + j.salary + '</span><span class="posted">' + I_CLOCK + " " + j.posted + "</span></div>" +
-      '<a class="btn btn-navy btn-sm btn-block" href="' + applyLink(j) + '">Apply by email ' + I_ARROW + "</a>";
+      '<a class="btn btn-navy btn-sm btn-block" href="' + applyLink(j) + '" target="_blank" rel="noopener">Apply now ' + I_ARROW + "</a>";
     jobsGrid.appendChild(card);
   });
 }
@@ -1008,6 +1007,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
   var name = document.getElementById("cfName").value.trim();
   var role = document.getElementById("cfRole").value;
+  if (role === "Job seeker") { window.open(APPLY_FORM, "_blank"); return; }
   var subject = document.getElementById("cfSubject").value.trim();
   var message = document.getElementById("cfMessage").value.trim();
   var body = "Hello KwikWork,\n\n" + message + "\n\n— " + name + " (" + role + ")";

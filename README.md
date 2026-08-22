@@ -56,7 +56,7 @@ Your site is one static file, so it hosts free on Netlify forever. Total cost: $
 6. **SSL:** back in Netlify → Domain management — it auto-issues a free
    Let's Encrypt certificate once DNS propagates (usually ~30 min, up to 24 h).
 7. **Email forwarding (critical):** hPanel → **Emails → Email forwarders** →
-   forward `hello@kwikwork.online` → your personal Gmail. Test by clicking
+   forward `support@kwikwork.online` → your personal Gmail. Test by clicking
    "Apply by Email" on your live site.
 
 **Common gotchas:** drag the FOLDER, not the zip · `index.html` must sit at the
@@ -91,7 +91,7 @@ and developer skills.
 7. Back in GitHub Pages settings → **Verify**. After DNS propagates
    (~30 min – 24 h) GitHub issues free SSL → tick **Enforce HTTPS**.
 8. **Email forwarding (critical):** hPanel → **Emails → Email forwarders** →
-   `hello@kwikwork.online` → your Gmail.
+   `support@kwikwork.online` → your Gmail.
 
 **To update the site later:** edit `index.html`, upload it to the repo again
 (commit), and the site updates itself in ~a minute. The **Actions** tab shows
@@ -102,12 +102,12 @@ each deployment, and you can roll back to any previous version.
 ## ⚠️ Critical for the US edition — set up your email
 
 Every "Apply by Email" button and the contact form sends to
-**hello@kwikwork.online**. That mailbox must actually exist or you will never
+**support@kwikwork.online**. That mailbox must actually exist or you will never
 see an application:
 
 1. Hostinger hPanel → **Emails** (for your domain).
-2. Either create a mailbox `hello@kwikwork.online`, **or** (cheaper) set up
-   **email forwarding**: `hello@kwikwork.online` → your personal Gmail.
+2. Either create a mailbox `support@kwikwork.online`, **or** (cheaper) set up
+   **email forwarding**: `support@kwikwork.online` → your personal Gmail.
    - Email forwarding is included free with Hostinger domains — you do NOT
      need a hosting plan for it.
 3. Test it: open your website, click "Apply by Email" on any job, send the
@@ -115,7 +115,7 @@ see an application:
 
 ## Getting a US phone number (optional but recommended)
 
-The site shows **+1 (555) 000-0000** as a placeholder. If you want a real US
+The site shows **+1 (832) 268-8854** as a placeholder. If you want a real US
 number that rings you anywhere, get a virtual number from a service like
 OpenPhone, Sonetel, or Skype Number (a few dollars/month), then replace the
 placeholder in the file. If you prefer email-only, just remove the phone cards.
@@ -128,8 +128,8 @@ Open `index.html` in any text editor (Notepad works) and change:
 
 | What | Search for | Replace with |
 |---|---|---|
-| Application email | `hello@kwikwork.online` (many places) | your real inbox/forwarder |
-| Phone number | `+15550000000` and `+1 (555) 000-0000` | your US virtual number |
+| Application email | `support@kwikwork.online` | ✅ done — set up the forwarder in hPanel |
+| Phone number | `+18322688854` / `+1 (832) 268-8854` | ✅ done |
 | Job listings | the `JOBS = [...]` list in the `<script>` section | your real jobs (US salaries) |
 | Locations | `New York, NY` etc. in the two `<select>` lists + jobs | cities you actually serve |
 | Category counts | the `CATEGORIES = [...]` list | your real numbers |

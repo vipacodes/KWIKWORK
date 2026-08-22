@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://kwikwork.online/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230A2540'/><text x='50' y='68' font-size='52' text-anchor='middle'>💼</text></svg>">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"KwikWork","url":"https://kwikwork.online","email":"hello@kwikwork.online","description":"US office staffing and recruitment agency.","areaServed":"US","knowsAbout":["Office staffing","Administrative recruitment","Temp staffing","Direct hire"]}
+{"@context":"https://schema.org","@type":"Organization","name":"KwikWork","url":"https://kwikwork.online","email":"support@kwikwork.online","description":"US office staffing and recruitment agency.","areaServed":"US","knowsAbout":["Office staffing","Administrative recruitment","Temp staffing","Direct hire"]}
 </script>
 <style>
   /* ================= TOKENS & RESET ================= */
@@ -428,6 +428,18 @@
     section { padding: 66px 0; }
     .hero { padding: 64px 0 72px; }
   }
+  /* small phones */
+  @media (max-width: 480px) {
+    .util-left .util-item + .util-item { display: none; }
+    .cat-grid { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .stat { padding: 14px 16px; }
+    .stat b { font-size: 20px; }
+    .hero-actions .btn { flex: 1 1 auto; }
+    .how-card, .emp-panel, .contact-form { padding: 26px 22px; }
+    .foot-grid { grid-template-columns: 1fr; gap: 28px; }
+    .foot-bottom { justify-content: center; text-align: center; }
+  }
 </style>
 </head>
 <body>
@@ -437,8 +449,8 @@
 <div class="util-bar">
   <div class="container">
     <div class="util-left">
-      <span class="util-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+15550000000">+1 (555) 000-0000</a></span>
-      <span class="util-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:hello@kwikwork.online">hello@kwikwork.online</a></span>
+      <span class="util-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18322688854">+1 (832) 268-8854</a></span>
+      <span class="util-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:support@kwikwork.online">support@kwikwork.online</a></span>
     </div>
     <div class="util-right">
       <span class="util-item">Mon–Fri · 9:00 AM – 6:00 PM ET</span>
@@ -468,7 +480,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-navy btn-sm" href="mailto:hello@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Request Staff</a>
+      <a class="btn btn-navy btn-sm" href="mailto:support@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Request Staff</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -508,8 +520,8 @@
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
             <select id="heroLocation" aria-label="Location">
               <option value="">All locations</option>
-              <option>New York, NY</option><option>Chicago, IL</option><option>Los Angeles, CA</option>
-              <option>Houston, TX</option><option>Austin, TX</option><option>Remote</option>
+              <option>Remote</option><option>New York, NY</option><option>Chicago, IL</option><option>Los Angeles, CA</option>
+              <option>Houston, TX</option><option>Austin, TX</option>
             </select>
           </label>
           <button class="btn btn-navy btn-block" type="submit">Search jobs</button>
@@ -517,7 +529,7 @@
         </form>
         <div class="employer-mini">
           <span>Hiring? Get shortlisted candidates in 48 hours.</span>
-          <a href="mailto:hello@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Get started →</a>
+          <a href="mailto:support@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Get started →</a>
         </div>
       </div>
     </div>
@@ -560,7 +572,7 @@
     <div class="section-head reveal">
       <span class="eyebrow">Current openings</span>
       <h2>Open office positions</h2>
-      <p>Apply by email — attach your resume and send. Most employers respond within two business days.</p>
+      <p>Most roles are fully remote — work from anywhere in the US. Apply by email, attach your resume, and most employers respond within two business days.</p>
     </div>
 
     <div class="filters reveal">
@@ -572,8 +584,8 @@
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
         <select id="jobLocation" aria-label="Location filter">
           <option value="">All locations</option>
-          <option>New York, NY</option><option>Chicago, IL</option><option>Los Angeles, CA</option>
-          <option>Houston, TX</option><option>Austin, TX</option><option>Remote</option>
+          <option>Remote</option><option>New York, NY</option><option>Chicago, IL</option><option>Los Angeles, CA</option>
+          <option>Houston, TX</option><option>Austin, TX</option>
         </select>
       </label>
       <label class="search-field">
@@ -661,9 +673,9 @@
       <aside class="emp-panel reveal">
         <h3>Request staff</h3>
         <p>Send us your job brief and receive a shortlist of pre-screened candidates within 48 hours.</p>
-        <a class="btn btn-teal" href="mailto:hello@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Email your job brief</a>
-        <a class="btn btn-ghost" href="tel:+15550000000">Call +1 (555) 000-0000</a>
-        <p class="phone-line">Prefer to talk? <a href="tel:+15550000000">Speak with a recruiter</a></p>
+        <a class="btn btn-teal" href="mailto:support@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Email your job brief</a>
+        <a class="btn btn-ghost" href="tel:+18322688854">Call +1 (832) 268-8854</a>
+        <p class="phone-line">Prefer to talk? <a href="tel:+18322688854">Speak with a recruiter</a></p>
         <p class="fine">Free to list · You pay only when you hire.</p>
       </aside>
     </div>
@@ -754,11 +766,11 @@
       <div class="contact-info reveal">
         <div class="info-card">
           <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
-          <div><b>Call or text</b><p><a href="tel:+15550000000">+1 (555) 000-0000</a></p></div>
+          <div><b>Call or text</b><p><a href="tel:+18322688854">+1 (832) 268-8854</a></p></div>
         </div>
         <div class="info-card">
           <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
-          <div><b>Email</b><p><a href="mailto:hello@kwikwork.online">hello@kwikwork.online</a></p></div>
+          <div><b>Email</b><p><a href="mailto:support@kwikwork.online">support@kwikwork.online</a></p></div>
         </div>
         <div class="info-card">
           <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -841,8 +853,8 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+15550000000">+1 (555) 000-0000</a></li>
-          <li><a href="mailto:hello@kwikwork.online">hello@kwikwork.online</a></li>
+          <li><a href="tel:+18322688854">+1 (832) 268-8854</a></li>
+          <li><a href="mailto:support@kwikwork.online">support@kwikwork.online</a></li>
           <li>Mon – Fri · 9 AM – 6 PM ET</li>
         </ul>
       </div>
@@ -864,22 +876,22 @@
    set up forwarding in Hostinger hPanel → Emails).
    ================================================================== */
 
-var SITE_EMAIL = "hello@kwikwork.online";
-var SITE_PHONE = "+15550000000";
+var SITE_EMAIL = "support@kwikwork.online";
+var SITE_PHONE = "+18322688854";
 
 var JOBS = [
-  { title: "Front Desk Receptionist", company: "Sapphire Consulting Group", location: "New York, NY", category: "Front Desk & Reception", type: "Full-time", salary: "$18 – $22 /hr", posted: "2 days ago", desc: "Welcome visitors, manage calls, schedule appointments and keep the front office running smoothly. Strong communication skills and MS Office proficiency required." },
-  { title: "Administrative Coordinator", company: "GreenField Logistics", location: "Chicago, IL", category: "Administration", type: "Full-time", salary: "$45,000 – $55,000 /yr", posted: "3 days ago", desc: "Handle day-to-day office admin, filing, memos and vendor coordination. Associate or bachelor's degree in a business field plus 2 years' experience." },
-  { title: "Customer Service Representative", company: "SwiftCare Insurance", location: "Austin, TX", category: "Customer Service", type: "Hybrid", salary: "$18 – $21 /hr", posted: "5 days ago", desc: "Respond to customer inquiries by phone and email, resolve complaints and log issues in the CRM. Excellent written and verbal communication essential." },
-  { title: "Data Entry Clerk", company: "BrightBooks Accounting", location: "Remote", category: "Data Entry", type: "Remote", salary: "$16 – $19 /hr", posted: "1 day ago", desc: "Enter and verify records in Excel and accounting software. Fast, accurate typing and strong attention to detail required." },
-  { title: "HR Assistant", company: "Nova Tech Solutions", location: "Los Angeles, CA", category: "Human Resources", type: "Full-time", salary: "$48,000 – $58,000 /yr", posted: "1 week ago", desc: "Support recruitment, onboarding and staff records. Degree in HR, business or a related field. SHRM certification a plus." },
-  { title: "Executive Assistant to CEO", company: "Meridian Trading Co.", location: "New York, NY", category: "Executive Support", type: "Full-time", salary: "$75,000 – $95,000 /yr", posted: "4 days ago", desc: "Manage the CEO's calendar, travel, correspondence and confidential documents. Minimum 4 years of C-suite support experience." },
-  { title: "Staff Accountant", company: "First Choice Credit Union", location: "Houston, TX", category: "Accounting & Finance", type: "Full-time", salary: "$58,000 – $70,000 /yr", posted: "6 days ago", desc: "Post transactions, reconcile accounts and prepare monthly reports. Accounting degree; QuickBooks experience and CPA progress an advantage." },
-  { title: "Office Manager", company: "Heartland AgriCo", location: "Chicago, IL", category: "Office Management", type: "Full-time", salary: "$60,000 – $75,000 /yr", posted: "1 week ago", desc: "Oversee office operations, procurement, supplies and support staff. 5+ years of office management experience required." },
-  { title: "Call Center Agent", company: "LinkPlus Telecom", location: "Houston, TX", category: "Customer Service", type: "Full-time", salary: "$15 – $17 /hr", posted: "2 days ago", desc: "Make and receive customer calls, update records and meet daily targets. Paid training provided — recent grads welcome." },
-  { title: "Personal Assistant", company: "HomeHaven Realty", location: "Los Angeles, CA", category: "Executive Support", type: "Part-time", salary: "$22 – $28 /hr", posted: "3 days ago", desc: "Support a busy property entrepreneur with scheduling, errands and client follow-ups. Organized, discreet and proactive." },
-  { title: "Bookkeeper (Part-time)", company: "Cresta Interiors", location: "Remote", category: "Accounting & Finance", type: "Part-time", salary: "$24 – $30 /hr", posted: "5 days ago", desc: "Keep weekly accounts in QuickBooks, prepare invoices and track expenses. 15–20 hours per week, flexible hours." },
-  { title: "Operations Trainee", company: "Golden Grain Foods", location: "Austin, TX", category: "Administration", type: "Full-time", salary: "$42,000 – $48,000 /yr", posted: "1 week ago", desc: "12-month trainee program rotating through admin, HR and operations. Recent graduates encouraged to apply." }
+  { title: "Virtual Receptionist", company: "Sapphire Consulting Group", location: "Remote", category: "Front Desk & Reception", type: "Remote", salary: "$16 – $20 /hr", posted: "2 days ago", desc: "Answer calls, route inquiries and manage appointment scheduling from home. Clear phone manner, quiet workspace and reliable high-speed internet required." },
+  { title: "Administrative Coordinator (Remote)", company: "GreenField Logistics", location: "Remote", category: "Administration", type: "Remote", salary: "$42,000 – $50,000 /yr", posted: "3 days ago", desc: "Manage calendars, documentation and vendor coordination for a distributed team. 2+ years of admin experience and strong Google Workspace skills." },
+  { title: "Customer Service Representative", company: "SwiftCare Insurance", location: "Remote", category: "Customer Service", type: "Remote", salary: "$17 – $20 /hr", posted: "5 days ago", desc: "Support policyholders by phone, email and chat from your home office. Excellent written and verbal communication; quiet workspace required." },
+  { title: "Data Entry Clerk", company: "BrightBooks Accounting", location: "Remote", category: "Data Entry", type: "Remote", salary: "$16 – $19 /hr", posted: "1 day ago", desc: "Enter and verify records in Excel and accounting software from home. Fast, accurate typing and strong attention to detail required." },
+  { title: "HR Assistant", company: "Nova Tech Solutions", location: "Remote", category: "Human Resources", type: "Remote", salary: "$46,000 – $56,000 /yr", posted: "1 week ago", desc: "Support recruiting, onboarding and HR records for a remote-first company. Degree in HR or business; SHRM certification a plus." },
+  { title: "Executive Virtual Assistant", company: "Meridian Trading Co.", location: "Remote", category: "Executive Support", type: "Remote", salary: "$65,000 – $85,000 /yr", posted: "4 days ago", desc: "Manage a CEO's calendar, inbox, travel and confidential documents fully remotely. 4+ years supporting C-suite executives." },
+  { title: "Staff Accountant", company: "First Choice Credit Union", location: "Remote", category: "Accounting & Finance", type: "Remote", salary: "$55,000 – $68,000 /yr", posted: "6 days ago", desc: "Remote month-end close, reconciliations and reporting. Accounting degree; QuickBooks experience and CPA progress an advantage." },
+  { title: "Office Manager", company: "Heartland AgriCo", location: "Chicago, IL", category: "Office Management", type: "Full-time", salary: "$60,000 – $75,000 /yr", posted: "1 week ago", desc: "On-site leadership of office operations, procurement and support staff. 5+ years of office management experience required." },
+  { title: "Call Center Agent (Work-from-Home)", company: "LinkPlus Telecom", location: "Remote", category: "Customer Service", type: "Remote", salary: "$15 – $17 /hr", posted: "2 days ago", desc: "Handle customer calls from your home office with paid training provided. USB headset and wired internet required; recent grads welcome." },
+  { title: "Personal Assistant", company: "HomeHaven Realty", location: "Los Angeles, CA", category: "Executive Support", type: "Hybrid", salary: "$22 – $28 /hr", posted: "3 days ago", desc: "Hybrid role supporting a property entrepreneur — three office days, two remote. Organized, discreet and proactive." },
+  { title: "Bookkeeper (Part-time)", company: "Cresta Interiors", location: "Remote", category: "Accounting & Finance", type: "Part-time", salary: "$24 – $30 /hr", posted: "5 days ago", desc: "Keep weekly accounts in QuickBooks, prepare invoices and track expenses. 15–20 hours per week, fully remote and flexible." },
+  { title: "Operations Trainee (Remote)", company: "Golden Grain Foods", location: "Remote", category: "Administration", type: "Remote", salary: "$40,000 – $46,000 /yr", posted: "1 week ago", desc: "12-month remote trainee program rotating through admin, HR and operations. Recent graduates encouraged to apply." }
 ];
 
 var CATEGORIES = [

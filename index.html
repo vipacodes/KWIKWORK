@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KwikWork | Office Staffing &amp; Recruitment Across the US</title>
+<meta name="description" content="KwikWork is a US office staffing and recruitment agency. Job seekers find verified office jobs; employers get pre-screened admin, customer service, accounting and front-desk candidates within 48 hours.">
+<link rel="canonical" href="https://kwikwork.online/">
+<meta property="og:title" content="KwikWork | Office Staffing & Recruitment Across the US">
+<meta property="og:description" content="Verified office jobs for job seekers. Pre-screened candidates for employers — within 48 hours.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kwikwork.online/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230A2540'/><text x='50' y='68' font-size='52' text-anchor='middle'>💼</text></svg>">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"KwikWork","url":"https://kwikwork.online","email":"hello@kwikwork.online","description":"US office staffing and recruitment agency.","areaServed":"US","knowsAbout":["Office staffing","Administrative recruitment","Temp staffing","Direct hire"]}
+</script>
+<style>
+  /* ================= TOKENS & RESET ================= */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --navy-950: #071726;
+    --navy-900: #0A2540;
+    --navy-800: #0E3050;
+    --ink: #14273D;
+    --body-ink: #3E5470;
+    --muted: #6B7C93;
+    --line: #E3EAF2;
+    --bg: #F6F9FC;
+    --card: #FFFFFF;
+    --teal: #0E8C7F;
+    --teal-dark: #0B6F65;
+    --teal-soft: #E7F5F3;
+    --gold: #C58A2E;
+    --radius: 12px;
+    --shadow-sm: 0 1px 2px rgba(10,37,64,.05);
+    --shadow: 0 1px 3px rgba(10,37,64,.06), 0 10px 28px rgba(10,37,64,.07);
+    --shadow-lift: 0 4px 10px rgba(10,37,64,.07), 0 20px 44px rgba(10,37,64,.13);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px; line-height: 1.65; color: var(--body-ink);
+    background: var(--bg); -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { color: var(--ink); letter-spacing: -0.02em; line-height: 1.18; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; border: none; background: none; }
+  input, select, textarea { font: inherit; }
+  .container { width: min(1160px, 92%); margin-inline: auto; }
+  section { padding: 92px 0; }
+  :focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--navy-900); color: #fff; padding: 10px 18px; z-index: 200; border-radius: 0 0 8px 0; }
+  .skip:focus { left: 0; }
+
+  /* ================= BUTTONS ================= */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+    padding: 13px 26px; border-radius: 10px; font-weight: 650; font-size: 14.5px;
+    transition: transform .16s ease, box-shadow .16s ease, background .16s ease, color .16s;
+    white-space: nowrap;
+  }
+  .btn:hover { transform: translateY(-1.5px); }
+  .btn-navy { background: var(--navy-900); color: #fff; box-shadow: 0 8px 20px rgba(10,37,64,.28); }
+  .btn-navy:hover { background: var(--navy-950); }
+  .btn-teal { background: var(--teal); color: #fff; box-shadow: 0 10px 24px rgba(14,140,127,.35); }
+  .btn-teal:hover { background: var(--teal-dark); }
+  .btn-white { background: #fff; color: var(--navy-900); box-shadow: 0 10px 24px rgba(4,12,20,.35); }
+  .btn-white:hover { background: #F0F6FB; }
+  .btn-ghost { background: rgba(255,255,255,.08); color: #fff; border: 1.5px solid rgba(255,255,255,.38); }
+  .btn-ghost:hover { background: rgba(255,255,255,.16); }
+  .btn-sm { padding: 9px 18px; font-size: 13.5px; border-radius: 9px; }
+  .btn-block { width: 100%; }
+
+  /* ================= UTILITY BAR ================= */
+  .util-bar { background: var(--navy-950); color: #9FB3C8; font-size: 12.5px; }
+  .util-bar .container { display: flex; justify-content: space-between; align-items: center; height: 38px; gap: 16px; }
+  .util-bar a { color: #C7D6E5; }
+  .util-bar a:hover { color: #fff; }
+  .util-left, .util-right { display: flex; align-items: center; gap: 20px; }
+  .util-item { display: inline-flex; align-items: center; gap: 7px; }
+  .util-item svg { opacity: .75; }
+
+  /* ================= HEADER ================= */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,.94); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 24px; }
+  .logo { display: flex; align-items: center; gap: 11px; }
+  .logo-mark {
+    width: 40px; height: 40px; border-radius: 11px;
+    background: linear-gradient(140deg, var(--navy-900), var(--navy-950));
+    display: grid; place-items: center; color: #2FD1BD;
+    box-shadow: 0 6px 14px rgba(10,37,64,.28);
+  }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.05; }
+  .logo-name { font-size: 20px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; }
+  .logo-name em { font-style: normal; color: var(--teal); }
+  .logo-tag { font-size: 9.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+  .nav-links { display: flex; align-items: center; gap: 30px; font-size: 14px; font-weight: 600; color: var(--body-ink); }
+  .nav-links a { padding: 6px 0; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; }
+  .nav-links a:hover { color: var(--navy-900); border-bottom-color: var(--teal); }
+  .nav-cta { display: flex; align-items: center; gap: 12px; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; }
+  .hamburger span { display: block; width: 23px; height: 2.5px; border-radius: 2px; background: var(--navy-900); }
+
+  /* ================= HERO ================= */
+  .hero {
+    position: relative; overflow: hidden; color: #fff;
+    background:
+      radial-gradient(880px 480px at 88% -12%, rgba(14,140,127,.28), transparent 62%),
+      radial-gradient(640px 400px at -8% 112%, rgba(197,138,46,.14), transparent 60%),
+      linear-gradient(158deg, var(--navy-900) 0%, var(--navy-950) 58%, #0A2E2A 100%);
+    padding: 92px 0 96px;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; opacity: .45;
+    background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 46px 46px;
+    mask-image: radial-gradient(ellipse at 55% 0%, #000 25%, transparent 72%);
+    -webkit-mask-image: radial-gradient(ellipse at 55% 0%, #000 25%, transparent 72%);
+  }
+  .hero .container { position: relative; }
+  .hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 56px; align-items: center; }
+  .eyebrow-line {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 11.5px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+    color: #7BE0D2; margin-bottom: 22px;
+  }
+  .eyebrow-line::before { content: ""; width: 34px; height: 2px; background: var(--teal); display: inline-block; }
+  .hero h1 { color: #fff; font-size: clamp(34px, 4.6vw, 54px); font-weight: 800; letter-spacing: -0.025em; margin-bottom: 20px; }
+  .hero h1 em { font-style: normal; color: #5ED6C6; }
+  .hero .sub { font-size: clamp(15.5px, 1.8vw, 17.5px); color: #B9C9DA; max-width: 540px; margin-bottom: 34px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 30px; }
+  .hero-trust { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #8FA6BC; }
+  .hero-trust .dots { display: flex; gap: 4px; }
+  .hero-trust .dots span { width: 6px; height: 6px; border-radius: 50%; background: #2FD1BD; display: block; }
+
+  /* hero right: search panel */
+  .search-panel {
+    background: #fff; border-radius: 16px; padding: 26px;
+    box-shadow: 0 30px 70px rgba(3,14,24,.5); color: var(--body-ink);
+  }
+  .search-panel h2 { font-size: 17px; font-weight: 750; margin-bottom: 4px; }
+  .search-panel > p { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+  .search-field {
+    display: flex; align-items: center; gap: 10px; padding: 11px 14px;
+    border-radius: 10px; border: 1.5px solid var(--line); background: var(--bg); margin-bottom: 10px;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .search-field:focus-within { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(14,140,127,.13); background: #fff; }
+  .search-field svg { flex-shrink: 0; color: var(--muted); }
+  .search-field input, .search-field select {
+    border: none; outline: none; font-size: 14.5px; color: var(--ink);
+    width: 100%; background: transparent; cursor: pointer;
+  }
+  .search-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 12px; }
+  .employer-mini {
+    margin-top: 14px; background: var(--navy-900); color: #C7D6E5; border-radius: 12px;
+    padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13.5px;
+  }
+  .employer-mini a { color: #7BE0D2; font-weight: 700; white-space: nowrap; }
+  .employer-mini a:hover { color: #fff; }
+
+  /* hero stats */
+  .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 64px; }
+  .stat {
+    background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.14);
+    border-radius: 14px; padding: 18px 20px; backdrop-filter: blur(4px);
+  }
+  .stat b { display: block; font-size: 24px; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+  .stat small { font-size: 12.5px; color: #93A9BE; font-weight: 550; }
+
+  /* ================= TRUST STRIP ================= */
+  .trust-strip { background: #fff; border-bottom: 1px solid var(--line); padding: 26px 0; }
+  .trust-strip .label {
+    text-align: center; font-size: 10.5px; font-weight: 800; letter-spacing: .18em;
+    text-transform: uppercase; color: #A6B6C8; margin-bottom: 14px;
+  }
+  .wordmarks { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 42px; }
+  .wordmarks span {
+    font-size: 12.5px; font-weight: 750; letter-spacing: .1em; color: #93A7BB;
+    text-transform: uppercase; transition: color .15s;
+  }
+  .wordmarks span:hover { color: var(--navy-900); }
+
+  /* ================= SECTION HEADS ================= */
+  .eyebrow {
+    display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--teal-dark); margin-bottom: 14px;
+  }
+  .section-head { max-width: 660px; margin-bottom: 48px; }
+  .section-head.center { margin-inline: auto; text-align: center; }
+  .section-head h2 { font-size: clamp(26px, 3.4vw, 38px); font-weight: 800; margin-bottom: 12px; }
+  .section-head p { font-size: 15.5px; color: var(--muted); }
+
+  /* ================= CATEGORIES ================= */
+  .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .cat-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 24px 22px; text-align: left; width: 100%;
+    transition: transform .18s, box-shadow .18s, border-color .18s;
+    position: relative;
+  }
+  .cat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: var(--teal); }
+  .cat-icon {
+    width: 44px; height: 44px; border-radius: 11px; display: grid; place-items: center;
+    background: var(--teal-soft); color: var(--teal-dark); margin-bottom: 15px;
+  }
+  .cat-card h3 { font-size: 15.5px; font-weight: 700; margin-bottom: 3px; }
+  .cat-card p { font-size: 13px; color: var(--muted); }
+  .cat-card .arrow { position: absolute; top: 22px; right: 20px; color: #C4D2E0; transition: color .15s, transform .15s; }
+  .cat-card:hover .arrow { color: var(--teal); transform: translateX(3px); }
+
+  /* ================= JOBS ================= */
+  #jobs { background: linear-gradient(180deg, #fff 0%, var(--bg) 30%); }
+  .filters {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px;
+    background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 12px;
+    box-shadow: var(--shadow-sm);
+  }
+  .filters .search-field { margin-bottom: 0; flex: 1 1 190px; }
+  .jobs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .job-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 22px; display: flex; flex-direction: column; gap: 11px;
+    transition: transform .18s, box-shadow .18s, border-color .18s;
+  }
+  .job-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: var(--teal); }
+  .job-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .job-logo {
+    width: 44px; height: 44px; border-radius: 11px; display: grid; place-items: center;
+    font-weight: 800; font-size: 14px; color: #fff; flex-shrink: 0; letter-spacing: .02em;
+  }
+  .badge { font-size: 11px; font-weight: 700; padding: 4px 11px; border-radius: 999px; letter-spacing: .03em; }
+  .b-full { background: var(--teal-soft); color: var(--teal-dark); }
+  .b-part { background: #FDF3E1; color: #92610F; }
+  .b-remote { background: #E4EEFB; color: #1D5DBF; }
+  .b-hybrid { background: #EEEBFA; color: #5B3FBF; }
+  .b-contract { background: #ECF1F6; color: #3E5470; }
+  .job-card h3 { font-size: 16.5px; font-weight: 750; }
+  .job-co { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .job-co .sep { color: #C4D2E0; }
+  .job-co svg { flex-shrink: 0; }
+  .job-desc { font-size: 13.6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .job-meta {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12.5px;
+    color: var(--muted); border-top: 1px solid var(--line); padding-top: 13px; margin-top: auto;
+  }
+  .job-salary { font-weight: 750; color: var(--navy-900); font-size: 13.5px; }
+  .posted { display: inline-flex; align-items: center; gap: 6px; }
+  .empty {
+    grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #fff;
+    border: 1.5px dashed var(--line); border-radius: var(--radius); color: var(--muted);
+  }
+  .empty b { display: block; font-size: 17px; color: var(--ink); margin-bottom: 6px; }
+
+  /* ================= HOW IT WORKS ================= */
+  .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .how-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 34px; }
+  .how-card.dark { background: linear-gradient(160deg, var(--navy-900), #0A222E); border: none; color: #B9C9DA; }
+  .how-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 3px; }
+  .how-card.dark h3 { color: #fff; }
+  .how-card > p { font-size: 13.5px; color: var(--muted); margin-bottom: 24px; }
+  .how-card.dark > p { color: #8FA6BC; }
+  .steps { list-style: none; display: flex; flex-direction: column; gap: 17px; }
+  .steps li { display: flex; gap: 15px; align-items: flex-start; }
+  .step-n {
+    width: 32px; height: 32px; border-radius: 9px; flex-shrink: 0;
+    display: grid; place-items: center; font-weight: 800; font-size: 13.5px;
+    background: var(--teal-soft); color: var(--teal-dark);
+  }
+  .how-card.dark .step-n { background: rgba(47,209,189,.14); color: #5ED6C6; }
+  .steps b { display: block; font-size: 14.5px; color: var(--ink); margin-bottom: 1px; }
+  .how-card.dark .steps b { color: #fff; }
+  .steps span { font-size: 13.2px; color: var(--muted); }
+  .how-card.dark .steps span { color: #8FA6BC; }
+
+  /* ================= EMPLOYERS / SERVICES ================= */
+  #employers { background: #fff; }
+  .emp-grid { display: grid; grid-template-columns: 1.45fr 1fr; gap: 48px; align-items: start; }
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 30px 0 26px; }
+  .svc-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 20px; background: var(--bg); }
+  .svc-icon {
+    width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center;
+    background: var(--navy-900); color: #2FD1BD; margin-bottom: 14px;
+  }
+  .svc-card h3 { font-size: 15px; font-weight: 750; margin-bottom: 5px; }
+  .svc-card p { font-size: 13.2px; color: var(--muted); }
+  .svc-bullets { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 11px 24px; }
+  .svc-bullets li { display: flex; gap: 10px; align-items: flex-start; font-size: 13.8px; }
+  .svc-bullets svg { flex-shrink: 0; margin-top: 3px; color: var(--teal); }
+  .emp-panel {
+    background: linear-gradient(165deg, var(--navy-900), var(--navy-950));
+    border-radius: 18px; padding: 38px 34px; color: #B9C9DA;
+    box-shadow: 0 26px 60px rgba(7,23,38,.4); position: sticky; top: 96px;
+  }
+  .emp-panel h3 { color: #fff; font-size: 22px; font-weight: 800; margin-bottom: 10px; }
+  .emp-panel > p { font-size: 14px; margin-bottom: 22px; }
+  .emp-panel .btn { width: 100%; margin-bottom: 10px; }
+  .emp-panel .phone-line {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-size: 13.5px; color: #C7D6E5; padding: 6px 0 16px;
+  }
+  .emp-panel .phone-line a { color: #fff; font-weight: 700; }
+  .emp-panel .fine { font-size: 12px; color: #7C93A9; text-align: center; border-top: 1px solid rgba(255,255,255,.12); padding-top: 15px; }
+
+  /* ================= TESTIMONIALS ================= */
+  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .testi {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 26px; display: flex; flex-direction: column; gap: 15px;
+  }
+  .stars { color: #E8A33D; letter-spacing: 2.5px; font-size: 14px; }
+  .testi > p { font-size: 14.2px; flex-grow: 1; color: var(--body-ink); }
+  .testi-who { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding-top: 15px; }
+  .avatar {
+    width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+    font-weight: 800; font-size: 13px; color: #fff; letter-spacing: .02em;
+  }
+  .testi-who b { display: block; font-size: 13.5px; color: var(--ink); }
+  .testi-who small { color: var(--muted); font-size: 12.3px; }
+
+  /* ================= FAQ ================= */
+  #faq { background: #fff; }
+  .faq-wrap { max-width: 780px; margin-inline: auto; }
+  details.faq { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); }
+  details.faq + details.faq { margin-top: 12px; }
+  details.faq summary {
+    list-style: none; cursor: pointer; padding: 18px 22px; font-weight: 700; font-size: 15px;
+    color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary::after {
+    content: "+"; font-size: 22px; font-weight: 500; color: var(--teal); transition: transform .2s; line-height: 1;
+  }
+  details.faq[open] summary::after { transform: rotate(45deg); }
+  details.faq .faq-body { padding: 0 22px 19px; font-size: 14.2px; color: var(--body-ink); }
+
+  /* ================= CONTACT ================= */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: start; }
+  .contact-info { display: flex; flex-direction: column; gap: 12px; }
+  .info-card {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 18px 20px; display: flex; gap: 15px; align-items: flex-start;
+  }
+  .info-icon {
+    width: 42px; height: 42px; border-radius: 11px; flex-shrink: 0;
+    display: grid; place-items: center; background: var(--teal-soft); color: var(--teal-dark);
+  }
+  .info-card b { font-size: 14.5px; display: block; margin-bottom: 2px; color: var(--ink); }
+  .info-card p, .info-card a { font-size: 13.6px; color: var(--muted); }
+  .info-card a:hover { color: var(--teal-dark); }
+  .contact-form {
+    background: #fff; border: 1px solid var(--line); border-radius: 16px;
+    padding: 34px; box-shadow: var(--shadow);
+  }
+  .contact-form h3 { font-size: 19px; font-weight: 800; margin-bottom: 5px; }
+  .contact-form > p { font-size: 13.5px; color: var(--muted); margin-bottom: 22px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-size: 12.5px; font-weight: 700; margin-bottom: 6px; color: var(--ink); }
+  .field input, .field textarea, .field select {
+    width: 100%; border: 1.5px solid var(--line); border-radius: 10px; padding: 11px 14px;
+    font-size: 14.2px; outline: none; transition: border-color .15s, box-shadow .15s;
+    background: var(--bg); color: var(--ink);
+  }
+  .field input:focus, .field textarea:focus, .field select:focus {
+    border-color: var(--teal); box-shadow: 0 0 0 4px rgba(14,140,127,.12); background: #fff;
+  }
+  .field textarea { resize: vertical; min-height: 108px; }
+  .form-note { font-size: 12px; color: var(--muted); margin-top: 12px; text-align: center; }
+
+  /* ================= FOOTER ================= */
+  footer { background: var(--navy-950); color: #8FA6BC; padding: 66px 0 30px; font-size: 13.6px; }
+  .foot-grid { display: grid; grid-template-columns: 1.7fr 1fr 1fr 1.25fr; gap: 40px; margin-bottom: 40px; }
+  .foot-grid .logo-name { color: #fff; }
+  .foot-grid .logo-tag { color: #6B8299; }
+  .foot-grid p { font-size: 13.2px; max-width: 300px; margin-top: 12px; }
+  .foot-grid h4 { color: #fff; font-size: 12.5px; font-weight: 750; margin-bottom: 15px; letter-spacing: .1em; text-transform: uppercase; }
+  .foot-grid ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .foot-grid ul a:hover { color: #7BE0D2; }
+  .foot-eeo {
+    border-top: 1px solid rgba(255,255,255,.09); padding-top: 24px; font-size: 12.3px;
+    color: #6B8299; line-height: 1.7; max-width: 820px;
+  }
+  .foot-bottom {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+    font-size: 12.5px; color: #6B8299; margin-top: 22px;
+  }
+
+  /* ================= REVEAL ANIMATION ================= */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 1020px) {
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    .jobs-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .emp-grid { grid-template-columns: 1fr; }
+    .emp-panel { position: static; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 740px) {
+    .util-bar .container { justify-content: center; }
+    .util-right { display: none; }
+    .nav-links, .nav-cta .btn { display: none; }
+    .hamburger { display: flex; }
+    header.nav-open .nav-links {
+      display: flex; position: absolute; top: 70px; left: 0; right: 0;
+      background: #fff; flex-direction: column; align-items: stretch; gap: 0;
+      border-bottom: 1px solid var(--line); box-shadow: var(--shadow-lift); padding: 8px 0;
+    }
+    header.nav-open .nav-links a { padding: 13px 22px; border-bottom: none; }
+    .jobs-grid, .svc-grid, .svc-bullets { grid-template-columns: 1fr; }
+    .cat-grid { grid-template-columns: 1fr 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    section { padding: 66px 0; }
+    .hero { padding: 64px 0 72px; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= UTILITY BAR ================= -->
+<div class="util-bar">
+  <div class="container">
+    <div class="util-left">
+      <span class="util-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+15550000000">+1 (555) 000-0000</a></span>
+      <span class="util-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:hello@kwikwork.online">hello@kwikwork.online</a></span>
+    </div>
+    <div class="util-right">
+      <span class="util-item">Mon–Fri · 9:00 AM – 6:00 PM ET</span>
+      <span class="util-item"><a href="#employers">For employers</a></span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header id="header">
+  <div class="container nav">
+    <a href="#home" class="logo" aria-label="KwikWork home">
+      <span class="logo-mark">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      </span>
+      <span class="logo-text">
+        <span class="logo-name">Kwik<em>Work</em></span>
+        <span class="logo-tag">Office Staffing &amp; Recruitment</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#jobs">Find Jobs</a>
+      <a href="#categories">Categories</a>
+      <a href="#employers">Employers</a>
+      <a href="#how">How It Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-navy btn-sm" href="mailto:hello@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Request Staff</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow-line">Office staffing &amp; recruitment</div>
+        <h1>The right office hire, <em>made kwikly.</em></h1>
+        <p class="sub">KwikWork pairs job seekers with verified office roles — and delivers employers pre-screened candidates within 48 hours. Administration, customer service, accounting, front desk, and beyond.</p>
+        <div class="hero-actions">
+          <a class="btn btn-teal" href="#jobs">Browse open roles</a>
+          <a class="btn btn-ghost" href="#employers">Request staff</a>
+        </div>
+        <div class="hero-trust">
+          <span class="dots" aria-hidden="true"><span></span><span></span><span></span></span>
+          Trusted by 180+ companies across the US
+        </div>
+      </div>
+
+      <div>
+        <form class="search-panel" id="heroSearch">
+          <h2>Find your next office role</h2>
+          <p>Search open positions — no account needed.</p>
+          <label class="search-field">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" placeholder="Job title or keyword" id="heroKeyword" aria-label="Keyword">
+          </label>
+          <label class="search-field">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <select id="heroLocation" aria-label="Location">
+              <option value="">All locations</option>
+              <option>New York, NY</option><option>Chicago, IL</option><option>Los Angeles, CA</option>
+              <option>Houston, TX</option><option>Austin, TX</option><option>Remote</option>
+            </select>
+          </label>
+          <button class="btn btn-navy btn-block" type="submit">Search jobs</button>
+          <p class="search-note">Free for job seekers · New roles added weekly</p>
+        </form>
+        <div class="employer-mini">
+          <span>Hiring? Get shortlisted candidates in 48 hours.</span>
+          <a href="mailto:hello@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Get started →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><b>500+</b><small>Open roles</small></div>
+      <div class="stat"><b>2,400+</b><small>Registered candidates</small></div>
+      <div class="stat"><b>180+</b><small>Hiring companies</small></div>
+      <div class="stat"><b>48 hrs</b><small>Average shortlist time</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="label">Trusted by teams at</div>
+    <div class="wordmarks" aria-label="Client companies">
+      <span>Sapphire Consulting</span><span>GreenField Logistics</span><span>SwiftCare</span>
+      <span>NovaTech</span><span>Meridian &amp; Co.</span><span>Heartland AgriCo</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= CATEGORIES ================= -->
+<section id="categories">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Practice areas</span>
+      <h2>Browse by specialty</h2>
+      <p>Select a category to view live roles. New positions are added every week.</p>
+    </div>
+    <div class="cat-grid reveal" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- ================= JOBS ================= -->
+<section id="jobs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Current openings</span>
+      <h2>Open office positions</h2>
+      <p>Apply by email — attach your resume and send. Most employers respond within two business days.</p>
+    </div>
+
+    <div class="filters reveal">
+      <label class="search-field">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search jobs…" id="jobKeyword" aria-label="Search jobs">
+      </label>
+      <label class="search-field">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <select id="jobLocation" aria-label="Location filter">
+          <option value="">All locations</option>
+          <option>New York, NY</option><option>Chicago, IL</option><option>Los Angeles, CA</option>
+          <option>Houston, TX</option><option>Austin, TX</option><option>Remote</option>
+        </select>
+      </label>
+      <label class="search-field">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <select id="jobCategory" aria-label="Category filter">
+          <option value="">All categories</option>
+          <option>Administration</option><option>Customer Service</option><option>Accounting &amp; Finance</option>
+          <option>Human Resources</option><option>Front Desk &amp; Reception</option><option>Data Entry</option>
+          <option>Executive Support</option><option>Office Management</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="jobs-grid" id="jobsGrid"></div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section id="how">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>A straightforward process, both sides</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-card reveal">
+        <h3>For job seekers</h3>
+        <p>Four steps between you and your next role.</p>
+        <ol class="steps">
+          <li><span class="step-n">1</span><div><b>Browse open roles</b><span>Filter by specialty, location, and employment type — new jobs weekly.</span></div></li>
+          <li><span class="step-n">2</span><div><b>Apply by email</b><span>Tap “Apply by email” and your mail app opens pre-addressed. Attach your resume and send — no accounts, no repeated forms.</span></div></li>
+          <li><span class="step-n">3</span><div><b>Get shortlisted</b><span>Employers respond within two business days on average.</span></div></li>
+          <li><span class="step-n">4</span><div><b>Interview &amp; start</b><span>We follow up to make sure the placement goes smoothly.</span></div></li>
+        </ol>
+      </div>
+      <div class="how-card dark reveal">
+        <h3>For employers</h3>
+        <p>Qualified office staff, this week.</p>
+        <ol class="steps">
+          <li><span class="step-n">1</span><div><b>Send your job brief</b><span>Role, requirements, and salary — by email or the contact form.</span></div></li>
+          <li><span class="step-n">2</span><div><b>Receive a shortlist</b><span>Screened, reference-checked resumes delivered within 48 hours.</span></div></li>
+          <li><span class="step-n">3</span><div><b>Interview your picks</b><span>We help schedule interviews on your terms.</span></div></li>
+          <li><span class="step-n">4</span><div><b>Hire with confidence</b><span>Every placement is backed by a replacement guarantee.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EMPLOYERS / SERVICES ================= -->
+<section id="employers">
+  <div class="container">
+    <div class="emp-grid">
+      <div class="reveal">
+        <span class="eyebrow">For employers</span>
+        <h2 style="font-size:clamp(26px,3.4vw,38px);font-weight:800;margin-bottom:12px;">Staffing services built around your office</h2>
+        <p style="font-size:15.5px;color:var(--muted);">From a one-day receptionist to a permanent office manager, KwikWork delivers pre-screened office professionals on your schedule.</p>
+
+        <div class="svc-grid">
+          <div class="svc-card">
+            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>Temporary staffing</h3>
+            <p>Cover vacations, medical leave, and busy seasons with vetted temps — often within 24 hours.</p>
+          </div>
+          <div class="svc-card">
+            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg></div>
+            <h3>Temp-to-hire</h3>
+            <p>Evaluate a candidate on the job before committing to a permanent offer.</p>
+          </div>
+          <div class="svc-card">
+            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Direct hire</h3>
+            <p>Focused search and placement for permanent office roles, from coordinator to office manager.</p>
+          </div>
+        </div>
+
+        <ul class="svc-bullets">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>ID-verified, reference-checked candidates</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Skills &amp; software assessments</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Shortlists within 48 hours</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Replacement guarantee on placements</span></li>
+        </ul>
+      </div>
+
+      <aside class="emp-panel reveal">
+        <h3>Request staff</h3>
+        <p>Send us your job brief and receive a shortlist of pre-screened candidates within 48 hours.</p>
+        <a class="btn btn-teal" href="mailto:hello@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Email your job brief</a>
+        <a class="btn btn-ghost" href="tel:+15550000000">Call +1 (555) 000-0000</a>
+        <p class="phone-line">Prefer to talk? <a href="tel:+15550000000">Speak with a recruiter</a></p>
+        <p class="fine">Free to list · You pay only when you hire.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Client results</span>
+      <h2>What clients and candidates say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>“We needed a front desk coordinator urgently. KwikWork sent four solid resumes the next morning and we hired within the week. Very smooth.”</p>
+        <div class="testi-who">
+          <div class="avatar" style="background:#0A2540;">MO</div>
+          <div><b>Melissa O.</b><small>Clinic Manager · Austin, TX</small></div>
+        </div>
+      </div>
+      <div class="testi reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>“I found my current admin job through KwikWork. Applying by email took minutes and the employer replied the same day. I've recommended it to all my friends.”</p>
+        <div class="testi-who">
+          <div class="avatar" style="background:#0E8C7F;">ET</div>
+          <div><b>Emily T.</b><small>Administrative Coordinator · Chicago, IL</small></div>
+        </div>
+      </div>
+      <div class="testi reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>“As a small business, agency fees were too much for us. KwikWork's pay-when-you-hire model was exactly what we needed. Our bookkeeper is superb.”</p>
+        <div class="testi-who">
+          <div class="avatar" style="background:#C58A2E;">FB</div>
+          <div><b>Fiona B.</b><small>Founder, retail startup · New York</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <details class="faq">
+        <summary>Is KwikWork free for job seekers?</summary>
+        <div class="faq-body">Yes — always. Browsing and applying costs nothing and no account is required. Employers cover all placement costs.</div>
+      </details>
+      <details class="faq">
+        <summary>How do I apply for a role?</summary>
+        <div class="faq-body">Tap “Apply by email” on any listing. Your email app opens pre-addressed to our recruitment team — attach your resume and send. We forward complete applications to the employer the same day.</div>
+      </details>
+      <details class="faq">
+        <summary>How quickly can employers see candidates?</summary>
+        <div class="faq-body">Typically within 48 hours of receiving your job brief. For temporary cover, we can often provide same-day or next-day candidates.</div>
+      </details>
+      <details class="faq">
+        <summary>What does it cost employers?</summary>
+        <div class="faq-body">Listing a role is free. A placement fee applies only when you hire — contact us for a quote tailored to the role. Every placement includes a replacement guarantee.</div>
+      </details>
+      <details class="faq">
+        <summary>How are candidates vetted?</summary>
+        <div class="faq-body">Every candidate is ID-verified, reference-checked, and screened for core office skills and software proficiency before joining a shortlist.</div>
+      </details>
+      <details class="faq">
+        <summary>Which locations do you serve?</summary>
+        <div class="faq-body">All 50 states — on-site placements in major metros plus fully remote roles across the country.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Talk to a recruiter today</h2>
+      <p>Questions about hiring or finding work? We reply within one business day.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="info-card">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
+          <div><b>Call or text</b><p><a href="tel:+15550000000">+1 (555) 000-0000</a></p></div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+          <div><b>Email</b><p><a href="mailto:hello@kwikwork.online">hello@kwikwork.online</a></p></div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><b>Coverage</b><p>Remote-first — serving all 50 states</p></div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><b>Hours</b><p>Mon – Fri · 9:00 AM – 6:00 PM ET</p></div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <h3>Send us a message</h3>
+        <p>Complete the form and your email app opens with your message ready to send.</p>
+        <div class="form-row">
+          <div class="field">
+            <label for="cfName">Full name</label>
+            <input type="text" id="cfName" placeholder="e.g. Jane Smith" required>
+          </div>
+          <div class="field">
+            <label for="cfRole">I am a…</label>
+            <select id="cfRole">
+              <option>Job seeker</option>
+              <option>Employer hiring</option>
+              <option>Just asking a question</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="cfSubject">Subject</label>
+          <input type="text" id="cfSubject" placeholder="What is this about?" required>
+        </div>
+        <div class="field">
+          <label for="cfMessage">Message</label>
+          <textarea id="cfMessage" placeholder="Tell us more…" required></textarea>
+        </div>
+        <button class="btn btn-navy btn-block" type="submit">Send by email</button>
+        <p class="form-note">Opens your email app pre-filled — nothing is stored on this website.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#home" class="logo" aria-label="KwikWork home">
+          <span class="logo-mark">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </span>
+          <span class="logo-text">
+            <span class="logo-name">Kwik<em style="color:#5ED6C6;font-style:normal;">Work</em></span>
+            <span class="logo-tag">Office Staffing &amp; Recruitment</span>
+          </span>
+        </a>
+        <p>The right office hire, made kwikly. Verified candidates for employers, real opportunities for job seekers — across all 50 states.</p>
+      </div>
+      <div>
+        <h4>Job seekers</h4>
+        <ul>
+          <li><a href="#jobs">Browse jobs</a></li>
+          <li><a href="#categories">Specialties</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Employers</h4>
+        <ul>
+          <li><a href="#employers">Our services</a></li>
+          <li><a href="#employers">Request staff</a></li>
+          <li><a href="#how">Our process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15550000000">+1 (555) 000-0000</a></li>
+          <li><a href="mailto:hello@kwikwork.online">hello@kwikwork.online</a></li>
+          <li>Mon – Fri · 9 AM – 6 PM ET</li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-eeo">KwikWork is an equal opportunity recruitment agency. We celebrate diversity and are committed to creating an inclusive environment for all clients and candidates. All qualified applicants receive consideration without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.</p>
+    <div class="foot-bottom">
+      <span>© 2026 KwikWork. All rights reserved.</span>
+      <span>kwikwork.online · Privacy Policy · Terms of Service</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ==================================================================
+   KWICKWORK SITE DATA & LOGIC (US edition, professional build)
+   ------------------------------------------------------------------
+   TO ADD / EDIT / REMOVE JOBS: edit the JOBS list below.
+   TO CHANGE WHERE APPLICATIONS GO: edit SITE_EMAIL (must exist —
+   set up forwarding in Hostinger hPanel → Emails).
+   ================================================================== */
+
+var SITE_EMAIL = "hello@kwikwork.online";
+var SITE_PHONE = "+15550000000";
+
+var JOBS = [
+  { title: "Front Desk Receptionist", company: "Sapphire Consulting Group", location: "New York, NY", category: "Front Desk & Reception", type: "Full-time", salary: "$18 – $22 /hr", posted: "2 days ago", desc: "Welcome visitors, manage calls, schedule appointments and keep the front office running smoothly. Strong communication skills and MS Office proficiency required." },
+  { title: "Administrative Coordinator", company: "GreenField Logistics", location: "Chicago, IL", category: "Administration", type: "Full-time", salary: "$45,000 – $55,000 /yr", posted: "3 days ago", desc: "Handle day-to-day office admin, filing, memos and vendor coordination. Associate or bachelor's degree in a business field plus 2 years' experience." },
+  { title: "Customer Service Representative", company: "SwiftCare Insurance", location: "Austin, TX", category: "Customer Service", type: "Hybrid", salary: "$18 – $21 /hr", posted: "5 days ago", desc: "Respond to customer inquiries by phone and email, resolve complaints and log issues in the CRM. Excellent written and verbal communication essential." },
+  { title: "Data Entry Clerk", company: "BrightBooks Accounting", location: "Remote", category: "Data Entry", type: "Remote", salary: "$16 – $19 /hr", posted: "1 day ago", desc: "Enter and verify records in Excel and accounting software. Fast, accurate typing and strong attention to detail required." },
+  { title: "HR Assistant", company: "Nova Tech Solutions", location: "Los Angeles, CA", category: "Human Resources", type: "Full-time", salary: "$48,000 – $58,000 /yr", posted: "1 week ago", desc: "Support recruitment, onboarding and staff records. Degree in HR, business or a related field. SHRM certification a plus." },
+  { title: "Executive Assistant to CEO", company: "Meridian Trading Co.", location: "New York, NY", category: "Executive Support", type: "Full-time", salary: "$75,000 – $95,000 /yr", posted: "4 days ago", desc: "Manage the CEO's calendar, travel, correspondence and confidential documents. Minimum 4 years of C-suite support experience." },
+  { title: "Staff Accountant", company: "First Choice Credit Union", location: "Houston, TX", category: "Accounting & Finance", type: "Full-time", salary: "$58,000 – $70,000 /yr", posted: "6 days ago", desc: "Post transactions, reconcile accounts and prepare monthly reports. Accounting degree; QuickBooks experience and CPA progress an advantage." },
+  { title: "Office Manager", company: "Heartland AgriCo", location: "Chicago, IL", category: "Office Management", type: "Full-time", salary: "$60,000 – $75,000 /yr", posted: "1 week ago", desc: "Oversee office operations, procurement, supplies and support staff. 5+ years of office management experience required." },
+  { title: "Call Center Agent", company: "LinkPlus Telecom", location: "Houston, TX", category: "Customer Service", type: "Full-time", salary: "$15 – $17 /hr", posted: "2 days ago", desc: "Make and receive customer calls, update records and meet daily targets. Paid training provided — recent grads welcome." },
+  { title: "Personal Assistant", company: "HomeHaven Realty", location: "Los Angeles, CA", category: "Executive Support", type: "Part-time", salary: "$22 – $28 /hr", posted: "3 days ago", desc: "Support a busy property entrepreneur with scheduling, errands and client follow-ups. Organized, discreet and proactive." },
+  { title: "Bookkeeper (Part-time)", company: "Cresta Interiors", location: "Remote", category: "Accounting & Finance", type: "Part-time", salary: "$24 – $30 /hr", posted: "5 days ago", desc: "Keep weekly accounts in QuickBooks, prepare invoices and track expenses. 15–20 hours per week, flexible hours." },
+  { title: "Operations Trainee", company: "Golden Grain Foods", location: "Austin, TX", category: "Administration", type: "Full-time", salary: "$42,000 – $48,000 /yr", posted: "1 week ago", desc: "12-month trainee program rotating through admin, HR and operations. Recent graduates encouraged to apply." }
+];
+
+var CATEGORIES = [
+  { name: "Administration", count: "120+ open roles" },
+  { name: "Customer Service", count: "95+ open roles" },
+  { name: "Accounting & Finance", count: "80+ open roles" },
+  { name: "Human Resources", count: "45+ open roles" },
+  { name: "Front Desk & Reception", count: "70+ open roles" },
+  { name: "Data Entry", count: "55+ open roles" },
+  { name: "Executive Support", count: "30+ open roles" },
+  { name: "Office Management", count: "35+ open roles" }
+];
+
+var BADGE = { "Full-time": "b-full", "Part-time": "b-part", "Remote": "b-remote", "Hybrid": "b-hybrid", "Contract": "b-contract" };
+var LOGO_COLORS = ["#0A2540", "#0E8C7F", "#C58A2E", "#1D5DBF", "#0B6F65", "#5B3FBF", "#92610F", "#3E5470"];
+
+var I_BUILDING = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg>';
+var I_PIN = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>';
+var I_CLOCK = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>';
+var I_ARROW = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+
+function initials(name) {
+  return name.split(/\s+/).filter(function (w) { return /^[A-Za-z]/.test(w); })
+    .slice(0, 2).map(function (w) { return w[0].toUpperCase(); }).join("") || "KW";
+}
+function applyLink(job) {
+  var subject = "Application: " + job.title + " — " + job.company;
+  var body = "Hello KwikWork,\n\nI would like to apply for the " + job.title + " position at " + job.company + " (" + job.location + "). Please find my resume attached.\n\nName:\nPhone:\n\nBest regards,";
+  return "mailto:" + SITE_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+}
+
+/* ---------- render category cards ---------- */
+var catGrid = document.getElementById("catGrid");
+CATEGORIES.forEach(function (cat) {
+  var icons = {
+    "Administration": '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+    "Customer Service": '<path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>',
+    "Accounting & Finance": '<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
+    "Human Resources": '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+    "Front Desk & Reception": '<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+    "Data Entry": '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h4M6 12h4M6 16h4M14 8h4M14 12h4M14 16h4"/>',
+    "Executive Support": '<path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/>',
+    "Office Management": '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/>'
+  };
+  var a = document.createElement("button");
+  a.className = "cat-card";
+  a.type = "button";
+  a.setAttribute("data-cat", cat.name);
+  a.innerHTML = '<div class="cat-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + (icons[cat.name] || icons["Administration"]) + '</svg></div><h3>' + cat.name + '</h3><p>' + cat.count + '</p><span class="arrow">' + I_ARROW + "</span>";
+  catGrid.appendChild(a);
+});
+
+/* ---------- render & filter jobs ---------- */
+var jobsGrid = document.getElementById("jobsGrid");
+var kwInput = document.getElementById("jobKeyword");
+var locSelect = document.getElementById("jobLocation");
+var catSelect = document.getElementById("jobCategory");
+
+function renderJobs() {
+  var kw = kwInput.value.trim().toLowerCase();
+  var loc = locSelect.value;
+  var cat = catSelect.value;
+  var list = JOBS.filter(function (j) {
+    var matchKw = !kw || (j.title + " " + j.company + " " + j.category + " " + j.desc).toLowerCase().indexOf(kw) !== -1;
+    var matchLoc = !loc || j.location === loc;
+    var matchCat = !cat || j.category === cat;
+    return matchKw && matchLoc && matchCat;
+  });
+  jobsGrid.innerHTML = "";
+  if (!list.length) {
+    jobsGrid.innerHTML = '<div class="empty"><b>No roles match your search</b>Try different keywords or clear the filters — or <a style="color:var(--teal-dark);font-weight:700;" href="#contact">send us a message</a> and we\'ll look out for you.</div>';
+    return;
+  }
+  list.forEach(function (j) {
+    var color = LOGO_COLORS[JOBS.indexOf(j) % LOGO_COLORS.length];
+    var card = document.createElement("article");
+    card.className = "job-card";
+    card.innerHTML =
+      '<div class="job-top"><div class="job-logo" style="background:' + color + ';">' + initials(j.company) + '</div><span class="badge ' + (BADGE[j.type] || "b-contract") + '">' + j.type + "</span></div>" +
+      "<h3>" + j.title + "</h3>" +
+      '<div class="job-co">' + I_BUILDING + " " + j.company + ' <span class="sep">·</span> ' + I_PIN + " " + j.location + "</div>" +
+      '<p class="job-desc">' + j.desc + "</p>" +
+      '<div class="job-meta"><span class="job-salary">' + j.salary + '</span><span class="posted">' + I_CLOCK + " " + j.posted + "</span></div>" +
+      '<a class="btn btn-navy btn-sm btn-block" href="' + applyLink(j) + '">Apply by email ' + I_ARROW + "</a>";
+    jobsGrid.appendChild(card);
+  });
+}
+
+kwInput.addEventListener("input", renderJobs);
+locSelect.addEventListener("change", renderJobs);
+catSelect.addEventListener("change", renderJobs);
+renderJobs();
+
+/* ---------- category cards → filter jobs ---------- */
+catGrid.addEventListener("click", function (e) {
+  var card = e.target.closest(".cat-card");
+  if (!card) return;
+  catSelect.value = card.getAttribute("data-cat");
+  renderJobs();
+  document.getElementById("jobs").scrollIntoView({ behavior: "smooth" });
+});
+
+/* ---------- hero search → jobs ---------- */
+document.getElementById("heroSearch").addEventListener("submit", function (e) {
+  e.preventDefault();
+  kwInput.value = document.getElementById("heroKeyword").value;
+  locSelect.value = document.getElementById("heroLocation").value;
+  renderJobs();
+  document.getElementById("jobs").scrollIntoView({ behavior: "smooth" });
+});
+
+/* ---------- contact form → email app ---------- */
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var name = document.getElementById("cfName").value.trim();
+  var role = document.getElementById("cfRole").value;
+  var subject = document.getElementById("cfSubject").value.trim();
+  var message = document.getElementById("cfMessage").value.trim();
+  var body = "Hello KwikWork,\n\n" + message + "\n\n— " + name + " (" + role + ")";
+  window.location.href = "mailto:" + SITE_EMAIL + "?subject=" + encodeURIComponent("[KwikWork] " + subject) + "&body=" + encodeURIComponent(body);
+});
+
+/* ---------- mobile menu ---------- */
+var header = document.getElementById("header");
+document.getElementById("hamburger").addEventListener("click", function () {
+  header.classList.toggle("nav-open");
+});
+header.querySelectorAll(".nav-links a").forEach(function (a) {
+  a.addEventListener("click", function () { header.classList.remove("nav-open"); });
+});
+
+/* ---------- subtle reveal-on-scroll ---------- */
+if ("IntersectionObserver" in window) {
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+} else {
+  document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+}
+</script>
+</body>
+</html>

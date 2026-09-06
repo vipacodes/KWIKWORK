@@ -3,752 +3,474 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KwikWork | Office Staffing &amp; Recruitment Across the US</title>
-<meta name="description" content="KwikWork is a US office staffing and recruitment agency. Job seekers find verified office jobs; employers get pre-screened admin, customer service, accounting and front-desk candidates within 48 hours.">
-<link rel="canonical" href="https://kwikwork.online/">
-<meta property="og:title" content="KwikWork | Office Staffing & Recruitment Across the US">
-<meta property="og:description" content="Verified office jobs for job seekers. Pre-screened candidates for employers — within 48 hours.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://kwikwork.online/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230A2540'/><text x='50' y='68' font-size='52' text-anchor='middle'>💼</text></svg>">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"KwikWork","url":"https://kwikwork.online","email":"support@kwikwork.online","description":"US office staffing and recruitment agency.","areaServed":"US","knowsAbout":["Office staffing","Administrative recruitment","Temp staffing","Direct hire"]}
-</script>
+<title>SupaWorkers — Managed Support for AI Training Work | Outlier, DataAnnotation &amp; More</title>
+<meta name="description" content="SupaWorkers helps people worldwide get onboarded, pass assessments, and stay tasked on AI training platforms like Outlier, DataAnnotation and Alignerr. No upfront fees — we earn a percentage when you earn.">
 <style>
-  /* ================= TOKENS & RESET ================= */
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --navy-950: #071726;
-    --navy-900: #0A2540;
-    --navy-800: #0E3050;
-    --ink: #14273D;
-    --body-ink: #3E5470;
-    --muted: #6B7C93;
-    --line: #E3EAF2;
-    --bg: #F6F9FC;
-    --card: #FFFFFF;
-    --teal: #0E8C7F;
-    --teal-dark: #0B6F65;
-    --teal-soft: #E7F5F3;
-    --gold: #C58A2E;
-    --radius: 12px;
-    --shadow-sm: 0 1px 2px rgba(10,37,64,.05);
-    --shadow: 0 1px 3px rgba(10,37,64,.06), 0 10px 28px rgba(10,37,64,.07);
-    --shadow-lift: 0 4px 10px rgba(10,37,64,.07), 0 20px 44px rgba(10,37,64,.13);
+  :root{
+    --paper:#FAF8F4;
+    --paper-2:#F3F0E9;
+    --ink:#1A1815;
+    --ink-soft:#3B3730;
+    --muted:#6E675D;
+    --hair:#E2DCD0;
+    --green:#1F5C48;
+    --green-deep:#153D30;
+    --paper-on-ink:#F5F2EA;
+    --muted-on-ink:#B7B0A2;
+    --hair-on-ink:#333028;
+    --serif:Georgia,'Iowan Old Style','Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,'SF Mono','Cascadia Mono',Menlo,Consolas,monospace;
   }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 15px; line-height: 1.65; color: var(--body-ink);
-    background: var(--bg); -webkit-font-smoothing: antialiased;
-  }
-  h1, h2, h3, h4 { color: var(--ink); letter-spacing: -0.02em; line-height: 1.18; }
-  a { color: inherit; text-decoration: none; }
-  button { font: inherit; cursor: pointer; border: none; background: none; }
-  input, select, textarea { font: inherit; }
-  .container { width: min(1160px, 92%); margin-inline: auto; }
-  section { padding: 92px 0; }
-  :focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
-  .skip { position: absolute; left: -9999px; top: 0; background: var(--navy-900); color: #fff; padding: 10px 18px; z-index: 200; border-radius: 0 0 8px 0; }
-  .skip:focus { left: 0; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--green);color:var(--paper)}
+  a{color:var(--green);text-decoration:none}
+  a.underline{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+  a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  #top{border-top:4px solid var(--green)}
 
-  /* ================= BUTTONS ================= */
-  .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-    padding: 13px 26px; border-radius: 10px; font-weight: 650; font-size: 14.5px;
-    transition: transform .16s ease, box-shadow .16s ease, background .16s ease, color .16s;
-    white-space: nowrap;
-  }
-  .btn:hover { transform: translateY(-1.5px); }
-  .btn-navy { background: var(--navy-900); color: #fff; box-shadow: 0 8px 20px rgba(10,37,64,.28); }
-  .btn-navy:hover { background: var(--navy-950); }
-  .btn-teal { background: var(--teal); color: #fff; box-shadow: 0 10px 24px rgba(14,140,127,.35); }
-  .btn-teal:hover { background: var(--teal-dark); }
-  .btn-white { background: #fff; color: var(--navy-900); box-shadow: 0 10px 24px rgba(4,12,20,.35); }
-  .btn-white:hover { background: #F0F6FB; }
-  .btn-ghost { background: rgba(255,255,255,.08); color: #fff; border: 1.5px solid rgba(255,255,255,.38); }
-  .btn-ghost:hover { background: rgba(255,255,255,.16); }
-  .btn-sm { padding: 9px 18px; font-size: 13.5px; border-radius: 9px; }
-  .btn-block { width: 100%; }
+  /* ---------- type utilities ---------- */
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+  .kicker b{color:var(--green);font-weight:600}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.015em;line-height:1.12}
+  .sec-num{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;color:var(--muted)}
 
-  /* ================= UTILITY BAR ================= */
-  .util-bar { background: var(--navy-950); color: #9FB3C8; font-size: 12.5px; }
-  .util-bar .container { display: flex; justify-content: space-between; align-items: center; height: 38px; gap: 16px; }
-  .util-bar a { color: #C7D6E5; }
-  .util-bar a:hover { color: #fff; }
-  .util-left, .util-right { display: flex; align-items: center; gap: 20px; }
-  .util-item { display: inline-flex; align-items: center; gap: 7px; }
-  .util-item svg { opacity: .75; }
+  /* ---------- header ---------- */
+  header.site{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--hair);z-index:60}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:24px}
+  .wordmark{font-family:var(--serif);font-weight:700;font-size:22px;color:var(--ink);letter-spacing:-.01em}
+  .wordmark i{font-style:normal;color:var(--green)}
+  .wordmark:hover{color:var(--ink)}
+  nav.main{display:flex;gap:30px;font-size:13.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+  nav.main a{color:var(--ink-soft)}
+  nav.main a:hover{color:var(--green)}
+  .btn{display:inline-block;font-family:var(--sans);font-size:14.5px;font-weight:600;letter-spacing:.02em;padding:13px 26px;border:1px solid var(--ink);cursor:pointer;transition:background .15s ease,color .15s ease,border-color .15s ease}
+  .btn-solid{background:var(--ink);color:var(--paper)}
+  .btn-solid:hover{background:var(--green);border-color:var(--green);color:var(--paper)}
+  .btn-outline{background:transparent;color:var(--ink)}
+  .btn-outline:hover{border-color:var(--green);color:var(--green)}
+  .btn-sm{padding:9px 18px;font-size:13px}
+  .menu-btn{display:none;background:none;border:1px solid var(--hair);font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;padding:9px 14px;cursor:pointer;color:var(--ink)}
+  .mobile-nav{display:none;border-top:1px solid var(--hair);background:var(--paper)}
+  .mobile-nav.open{display:block}
+  .mobile-nav a{display:block;padding:15px 28px;border-bottom:1px solid var(--hair);color:var(--ink-soft);font-size:15px}
 
-  /* ================= HEADER ================= */
-  header {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(255,255,255,.94); backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 24px; }
-  .logo { display: flex; align-items: center; gap: 11px; }
-  .logo-mark {
-    width: 40px; height: 40px; border-radius: 11px;
-    background: linear-gradient(140deg, var(--navy-900), var(--navy-950));
-    display: grid; place-items: center; color: #2FD1BD;
-    box-shadow: 0 6px 14px rgba(10,37,64,.28);
-  }
-  .logo-text { display: flex; flex-direction: column; line-height: 1.05; }
-  .logo-name { font-size: 20px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; }
-  .logo-name em { font-style: normal; color: var(--teal); }
-  .logo-tag { font-size: 9.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
-  .nav-links { display: flex; align-items: center; gap: 30px; font-size: 14px; font-weight: 600; color: var(--body-ink); }
-  .nav-links a { padding: 6px 0; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; }
-  .nav-links a:hover { color: var(--navy-900); border-bottom-color: var(--teal); }
-  .nav-cta { display: flex; align-items: center; gap: 12px; }
-  .hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; }
-  .hamburger span { display: block; width: 23px; height: 2.5px; border-radius: 2px; background: var(--navy-900); }
+  /* ---------- hero ---------- */
+  .hero{padding:88px 0 80px;border-bottom:1px solid var(--hair)}
+  .hero-grid{display:grid;grid-template-columns:7fr 4fr;gap:64px;align-items:start}
+  .hero h1{font-size:clamp(38px,5vw,58px);margin:22px 0 24px}
+  .hero h1 em{font-style:italic;color:var(--green)}
+  .hero .lede{font-size:18px;color:var(--ink-soft);max-width:560px;margin-bottom:34px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .cta-note{font-size:13px;color:var(--muted);margin-top:16px}
+  .stuck{border-left:1px solid var(--hair);padding-left:32px}
+  .stuck h2{font-size:15px;font-family:var(--sans);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin:14px 0 6px}
+  .stuck-item{padding:16px 0;border-bottom:1px solid var(--hair)}
+  .stuck-item:last-of-type{border-bottom:none}
+  .stuck-item .n{font-family:var(--mono);font-size:11px;color:var(--green);letter-spacing:.14em}
+  .stuck-item b{display:block;font-size:15.5px;margin:2px 0}
+  .stuck-item span{font-size:13.5px;color:var(--muted)}
 
-  /* ================= HERO ================= */
-  .hero {
-    position: relative; overflow: hidden; color: #fff;
-    background:
-      radial-gradient(880px 480px at 88% -12%, rgba(14,140,127,.28), transparent 62%),
-      radial-gradient(640px 400px at -8% 112%, rgba(197,138,46,.14), transparent 60%),
-      linear-gradient(158deg, var(--navy-900) 0%, var(--navy-950) 58%, #0A2E2A 100%);
-    padding: 92px 0 96px;
-  }
-  .hero::before {
-    content: ""; position: absolute; inset: 0; opacity: .45;
-    background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
-    background-size: 46px 46px;
-    mask-image: radial-gradient(ellipse at 55% 0%, #000 25%, transparent 72%);
-    -webkit-mask-image: radial-gradient(ellipse at 55% 0%, #000 25%, transparent 72%);
-  }
-  .hero .container { position: relative; }
-  .hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 56px; align-items: center; }
-  .eyebrow-line {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-size: 11.5px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
-    color: #7BE0D2; margin-bottom: 22px;
-  }
-  .eyebrow-line::before { content: ""; width: 34px; height: 2px; background: var(--teal); display: inline-block; }
-  .hero h1 { color: #fff; font-size: clamp(34px, 4.6vw, 54px); font-weight: 800; letter-spacing: -0.025em; margin-bottom: 20px; }
-  .hero h1 em { font-style: normal; color: #5ED6C6; }
-  .hero .sub { font-size: clamp(15.5px, 1.8vw, 17.5px); color: #B9C9DA; max-width: 540px; margin-bottom: 34px; }
-  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 30px; }
-  .hero-trust { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #8FA6BC; }
-  .hero-trust .dots { display: flex; gap: 4px; }
-  .hero-trust .dots span { width: 6px; height: 6px; border-radius: 50%; background: #2FD1BD; display: block; }
+  /* ---------- platform strip ---------- */
+  .strip{border-bottom:1px solid var(--hair);background:var(--paper-2)}
+  .strip-inner{display:flex;align-items:baseline;gap:28px;padding:26px 0;flex-wrap:wrap}
+  .strip .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  .strip .names{font-family:var(--serif);font-size:16px;color:var(--ink-soft);letter-spacing:.01em}
+  .strip .names i{font-style:normal;color:var(--green);padding:0 10px}
 
-  /* hero right: search panel */
-  .search-panel {
-    background: #fff; border-radius: 16px; padding: 26px;
-    box-shadow: 0 30px 70px rgba(3,14,24,.5); color: var(--body-ink);
-  }
-  .search-panel h2 { font-size: 17px; font-weight: 750; margin-bottom: 4px; }
-  .search-panel > p { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
-  .search-field {
-    display: flex; align-items: center; gap: 10px; padding: 11px 14px;
-    border-radius: 10px; border: 1.5px solid var(--line); background: var(--bg); margin-bottom: 10px;
-    transition: border-color .15s, box-shadow .15s;
-  }
-  .search-field:focus-within { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(14,140,127,.13); background: #fff; }
-  .search-field svg { flex-shrink: 0; color: var(--muted); }
-  .search-field input, .search-field select {
-    border: none; outline: none; font-size: 14.5px; color: var(--ink);
-    width: 100%; background: transparent; cursor: pointer;
-  }
-  .search-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 12px; }
-  .employer-mini {
-    margin-top: 14px; background: var(--navy-900); color: #C7D6E5; border-radius: 12px;
-    padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13.5px;
-  }
-  .employer-mini a { color: #7BE0D2; font-weight: 700; white-space: nowrap; }
-  .employer-mini a:hover { color: #fff; }
+  /* ---------- sections ---------- */
+  section{padding:96px 0}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:56px;border-bottom:1px solid var(--ink);padding-bottom:18px}
+  .sec-head h2{font-size:clamp(27px,3.4vw,38px)}
+  .sec-head .sec-num{white-space:nowrap}
 
-  /* hero stats */
-  .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 64px; }
-  .stat {
-    background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.14);
-    border-radius: 14px; padding: 18px 20px; backdrop-filter: blur(4px);
-  }
-  .stat b { display: block; font-size: 24px; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
-  .stat small { font-size: 12.5px; color: #93A9BE; font-weight: 550; }
+  /* services rows */
+  .row{display:grid;grid-template-columns:70px 5fr 6fr;gap:36px;padding:40px 0;border-bottom:1px solid var(--hair);align-items:start}
+  .row .idx{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:8px}
+  .row h3{font-size:24px;margin-bottom:10px}
+  .row .where{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:8px}
+  .row p{color:var(--ink-soft);font-size:16px;margin-bottom:12px}
+  .row ul{list-style:none}
+  .row li{font-size:14.5px;color:var(--muted);padding:5px 0 5px 18px;position:relative}
+  .row li::before{content:"—";position:absolute;left:0;color:var(--green)}
+  .row:hover h3{color:var(--green)}
 
-  /* ================= TRUST STRIP ================= */
-  .trust-strip { background: #fff; border-bottom: 1px solid var(--line); padding: 26px 0; }
-  .trust-strip .label {
-    text-align: center; font-size: 10.5px; font-weight: 800; letter-spacing: .18em;
-    text-transform: uppercase; color: #A6B6C8; margin-bottom: 14px;
-  }
-  .wordmarks { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 42px; }
-  .wordmarks span {
-    font-size: 12.5px; font-weight: 750; letter-spacing: .1em; color: #93A7BB;
-    text-transform: uppercase; transition: color .15s;
-  }
-  .wordmarks span:hover { color: var(--navy-900); }
+  /* steps */
+  #how{background:var(--paper-2);border-block:1px solid var(--hair)}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:step}
+  .step{border-left:1px solid var(--hair);padding:8px 26px 8px 24px}
+  .step .n{font-family:var(--mono);font-size:12px;color:var(--green);letter-spacing:.16em;display:block;margin-bottom:14px}
+  .step b{font-family:var(--serif);font-size:18.5px;font-weight:600;display:block;margin-bottom:8px;letter-spacing:-.01em}
+  .step span{font-size:13.8px;color:var(--muted);display:block}
+  .how-note{margin-top:56px;padding-top:24px;border-top:1px solid var(--hair);display:flex;gap:16px;align-items:baseline}
+  .how-note .kicker{white-space:nowrap}
+  .how-note p{font-size:15.5px;color:var(--ink-soft)}
 
-  /* ================= SECTION HEADS ================= */
-  .eyebrow {
-    display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .16em;
-    text-transform: uppercase; color: var(--teal-dark); margin-bottom: 14px;
-  }
-  .section-head { max-width: 660px; margin-bottom: 48px; }
-  .section-head.center { margin-inline: auto; text-align: center; }
-  .section-head h2 { font-size: clamp(26px, 3.4vw, 38px); font-weight: 800; margin-bottom: 12px; }
-  .section-head p { font-size: 15.5px; color: var(--muted); }
+  /* pricing */
+  .price-grid{display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:start}
+  .price-grid h2{font-size:clamp(30px,3.8vw,44px);margin:20px 0 24px}
+  .price-grid h2 em{font-style:italic;color:var(--green)}
+  .price-grid .big{font-size:17.5px;color:var(--ink-soft)}
+  .fee-card{border:1px solid var(--ink);padding:36px 38px;background:var(--paper)}
+  .fee-card .rate{font-family:var(--serif);font-size:56px;font-weight:600;letter-spacing:-.02em;line-height:1}
+  .fee-card .rate small{font-size:16px;font-family:var(--sans);font-weight:500;color:var(--muted);letter-spacing:0}
+  .fee-card .of{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:8px 0 26px}
+  .fee-card ul{list-style:none;border-top:1px solid var(--hair)}
+  .fee-card li{font-size:15px;color:var(--ink-soft);padding:11px 0;border-bottom:1px solid var(--hair);display:flex;gap:12px}
+  .fee-card li::before{content:"+";color:var(--green);font-weight:700}
+  .fee-card .fine{font-size:12.5px;color:var(--muted);margin-top:18px}
 
-  /* ================= CATEGORIES ================= */
-  .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-  .cat-card {
-    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 24px 22px; text-align: left; width: 100%;
-    transition: transform .18s, box-shadow .18s, border-color .18s;
-    position: relative;
-  }
-  .cat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: var(--teal); }
-  .cat-icon {
-    width: 44px; height: 44px; border-radius: 11px; display: grid; place-items: center;
-    background: var(--teal-soft); color: var(--teal-dark); margin-bottom: 15px;
-  }
-  .cat-card h3 { font-size: 15.5px; font-weight: 700; margin-bottom: 3px; }
-  .cat-card p { font-size: 13px; color: var(--muted); }
-  .cat-card .arrow { position: absolute; top: 22px; right: 20px; color: #C4D2E0; transition: color .15s, transform .15s; }
-  .cat-card:hover .arrow { color: var(--teal); transform: translateX(3px); }
+  /* platforms index */
+  .plat-list{border-top:1px solid var(--ink)}
+  .plat{display:grid;grid-template-columns:3fr 7fr 2fr;gap:28px;padding:19px 0;border-bottom:1px solid var(--hair);align-items:baseline}
+  .plat b{font-family:var(--serif);font-size:18.5px;font-weight:600}
+  .plat span{font-size:14.5px;color:var(--muted)}
+  .plat .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);text-align:right}
+  .plat:hover b{color:var(--green)}
+  .plat-note{font-size:13px;color:var(--muted);margin-top:26px;max-width:640px}
 
-  /* ================= JOBS ================= */
-  #jobs { background: linear-gradient(180deg, #fff 0%, var(--bg) 30%); }
-  .filters {
-    display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px;
-    background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 12px;
-    box-shadow: var(--shadow-sm);
-  }
-  .filters .search-field { margin-bottom: 0; flex: 1 1 190px; }
-  .jobs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .job-card {
-    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 22px; display: flex; flex-direction: column; gap: 11px;
-    transition: transform .18s, box-shadow .18s, border-color .18s;
-  }
-  .job-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: var(--teal); }
-  .job-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-  .job-logo {
-    width: 44px; height: 44px; border-radius: 11px; display: grid; place-items: center;
-    font-weight: 800; font-size: 14px; color: #fff; flex-shrink: 0; letter-spacing: .02em;
-  }
-  .badge { font-size: 11px; font-weight: 700; padding: 4px 11px; border-radius: 999px; letter-spacing: .03em; }
-  .b-full { background: var(--teal-soft); color: var(--teal-dark); }
-  .b-part { background: #FDF3E1; color: #92610F; }
-  .b-remote { background: #E4EEFB; color: #1D5DBF; }
-  .b-hybrid { background: #EEEBFA; color: #5B3FBF; }
-  .b-contract { background: #ECF1F6; color: #3E5470; }
-  .job-card h3 { font-size: 16.5px; font-weight: 750; }
-  .job-co { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  .job-co .sep { color: #C4D2E0; }
-  .job-co svg { flex-shrink: 0; }
-  .job-desc { font-size: 13.6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-  .job-meta {
-    display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12.5px;
-    color: var(--muted); border-top: 1px solid var(--line); padding-top: 13px; margin-top: auto;
-  }
-  .job-salary { font-weight: 750; color: var(--navy-900); font-size: 13.5px; }
-  .posted { display: inline-flex; align-items: center; gap: 6px; }
-  .empty {
-    grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #fff;
-    border: 1.5px dashed var(--line); border-radius: var(--radius); color: var(--muted);
-  }
-  .empty b { display: block; font-size: 17px; color: var(--ink); margin-bottom: 6px; }
+  /* faq */
+  #faq{background:var(--paper-2);border-block:1px solid var(--hair)}
+  .faq-wrap{max-width:820px}
+  details{border-bottom:1px solid var(--hair)}
+  details:first-of-type{border-top:1px solid var(--ink)}
+  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:22px 4px;font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:-.01em}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:var(--sans);color:var(--green);font-size:20px;font-weight:400}
+  details[open] summary::after{content:"–"}
+  details[open]{background:var(--paper)}
+  .faq-body{padding:0 4px 24px;color:var(--ink-soft);font-size:15.5px;max-width:680px}
 
-  /* ================= HOW IT WORKS ================= */
-  .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .how-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 34px; }
-  .how-card.dark { background: linear-gradient(160deg, var(--navy-900), #0A222E); border: none; color: #B9C9DA; }
-  .how-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 3px; }
-  .how-card.dark h3 { color: #fff; }
-  .how-card > p { font-size: 13.5px; color: var(--muted); margin-bottom: 24px; }
-  .how-card.dark > p { color: #8FA6BC; }
-  .steps { list-style: none; display: flex; flex-direction: column; gap: 17px; }
-  .steps li { display: flex; gap: 15px; align-items: flex-start; }
-  .step-n {
-    width: 32px; height: 32px; border-radius: 9px; flex-shrink: 0;
-    display: grid; place-items: center; font-weight: 800; font-size: 13.5px;
-    background: var(--teal-soft); color: var(--teal-dark);
-  }
-  .how-card.dark .step-n { background: rgba(47,209,189,.14); color: #5ED6C6; }
-  .steps b { display: block; font-size: 14.5px; color: var(--ink); margin-bottom: 1px; }
-  .how-card.dark .steps b { color: #fff; }
-  .steps span { font-size: 13.2px; color: var(--muted); }
-  .how-card.dark .steps span { color: #8FA6BC; }
+  /* contact */
+  #contact{padding:110px 0}
+  .contact-grid{display:grid;grid-template-columns:6fr 4fr;gap:72px;align-items:start}
+  #contact h2{font-size:clamp(34px,4.6vw,52px);margin:18px 0 20px}
+  #contact h2 em{font-style:italic;color:var(--green)}
+  #contact .lede{font-size:17px;color:var(--ink-soft);max-width:520px;margin-bottom:34px}
+  .contact-side{border-left:1px solid var(--hair);padding-left:40px}
+  .contact-side .blk{padding:16px 0;border-bottom:1px solid var(--hair)}
+  .contact-side .blk:last-child{border-bottom:none}
+  .contact-side .kicker{display:block;margin-bottom:4px}
+  .contact-side a.big,.contact-side .big{font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .contact-side a.big:hover{color:var(--green)}
+  .contact-side span{font-size:14px;color:var(--muted)}
 
-  /* ================= EMPLOYERS / SERVICES ================= */
-  #employers { background: #fff; }
-  .emp-grid { display: grid; grid-template-columns: 1.45fr 1fr; gap: 48px; align-items: start; }
-  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 30px 0 26px; }
-  .svc-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 20px; background: var(--bg); }
-  .svc-icon {
-    width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center;
-    background: var(--navy-900); color: #2FD1BD; margin-bottom: 14px;
-  }
-  .svc-card h3 { font-size: 15px; font-weight: 750; margin-bottom: 5px; }
-  .svc-card p { font-size: 13.2px; color: var(--muted); }
-  .svc-bullets { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 11px 24px; }
-  .svc-bullets li { display: flex; gap: 10px; align-items: flex-start; font-size: 13.8px; }
-  .svc-bullets svg { flex-shrink: 0; margin-top: 3px; color: var(--teal); }
-  .emp-panel {
-    background: linear-gradient(165deg, var(--navy-900), var(--navy-950));
-    border-radius: 18px; padding: 38px 34px; color: #B9C9DA;
-    box-shadow: 0 26px 60px rgba(7,23,38,.4); position: sticky; top: 96px;
-  }
-  .emp-panel h3 { color: #fff; font-size: 22px; font-weight: 800; margin-bottom: 10px; }
-  .emp-panel > p { font-size: 14px; margin-bottom: 22px; }
-  .emp-panel .btn { width: 100%; margin-bottom: 10px; }
-  .emp-panel .phone-line {
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    font-size: 13.5px; color: #C7D6E5; padding: 6px 0 16px;
-  }
-  .emp-panel .phone-line a { color: #fff; font-weight: 700; }
-  .emp-panel .fine { font-size: 12px; color: #7C93A9; text-align: center; border-top: 1px solid rgba(255,255,255,.12); padding-top: 15px; }
+  /* footer */
+  footer{background:var(--ink);color:var(--muted-on-ink);font-size:13.5px}
+  .foot-inner{padding:52px 0 0}
+  .foot-top{display:flex;justify-content:space-between;gap:44px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid var(--hair-on-ink)}
+  .foot-brand .wordmark{color:var(--paper-on-ink);font-size:20px}
+  .foot-brand p{max-width:300px;margin-top:12px;font-size:13.5px}
+  .foot-col{min-width:150px}
+  .foot-col b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-on-ink);margin-bottom:12px}
+  .foot-col a{display:block;color:var(--muted-on-ink);padding:3px 0;font-size:13.5px}
+  .foot-col a:hover{color:var(--paper-on-ink)}
+  .foot-legal{padding:24px 0 34px;display:flex;flex-direction:column;gap:10px}
+  .foot-legal p{max-width:900px;line-height:1.6}
 
-  /* ================= TESTIMONIALS ================= */
-  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .testi {
-    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 26px; display: flex; flex-direction: column; gap: 15px;
-  }
-  .stars { color: #E8A33D; letter-spacing: 2.5px; font-size: 14px; }
-  .testi > p { font-size: 14.2px; flex-grow: 1; color: var(--body-ink); }
-  .testi-who { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding-top: 15px; }
-  .avatar {
-    width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
-    font-weight: 800; font-size: 13px; color: #fff; letter-spacing: .02em;
-  }
-  .testi-who b { display: block; font-size: 13.5px; color: var(--ink); }
-  .testi-who small { color: var(--muted); font-size: 12.3px; }
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .65s ease,transform .65s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 
-  /* ================= FAQ ================= */
-  #faq { background: #fff; }
-  .faq-wrap { max-width: 780px; margin-inline: auto; }
-  details.faq { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); }
-  details.faq + details.faq { margin-top: 12px; }
-  details.faq summary {
-    list-style: none; cursor: pointer; padding: 18px 22px; font-weight: 700; font-size: 15px;
-    color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:48px}
+    .stuck{border-left:none;padding-left:0;border-top:1px solid var(--hair);padding-top:8px}
+    .steps{grid-template-columns:1fr;border-top:1px solid var(--hair)}
+    .step{border-left:none;border-bottom:1px solid var(--hair);padding:18px 0}
+    .price-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+    .contact-side{border-left:none;padding-left:0;border-top:1px solid var(--hair);padding-top:16px}
+    .row{grid-template-columns:1fr;gap:14px;padding:32px 0}
+    .row .idx{padding-top:0}
   }
-  details.faq summary::-webkit-details-marker { display: none; }
-  details.faq summary::after {
-    content: "+"; font-size: 22px; font-weight: 500; color: var(--teal); transition: transform .2s; line-height: 1;
-  }
-  details.faq[open] summary::after { transform: rotate(45deg); }
-  details.faq .faq-body { padding: 0 22px 19px; font-size: 14.2px; color: var(--body-ink); }
-
-  /* ================= CONTACT ================= */
-  .contact-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: start; }
-  .contact-info { display: flex; flex-direction: column; gap: 12px; }
-  .info-card {
-    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 18px 20px; display: flex; gap: 15px; align-items: flex-start;
-  }
-  .info-icon {
-    width: 42px; height: 42px; border-radius: 11px; flex-shrink: 0;
-    display: grid; place-items: center; background: var(--teal-soft); color: var(--teal-dark);
-  }
-  .info-card b { font-size: 14.5px; display: block; margin-bottom: 2px; color: var(--ink); }
-  .info-card p, .info-card a { font-size: 13.6px; color: var(--muted); }
-  .info-card a:hover { color: var(--teal-dark); }
-  .contact-form {
-    background: #fff; border: 1px solid var(--line); border-radius: 16px;
-    padding: 34px; box-shadow: var(--shadow);
-  }
-  .contact-form h3 { font-size: 19px; font-weight: 800; margin-bottom: 5px; }
-  .contact-form > p { font-size: 13.5px; color: var(--muted); margin-bottom: 22px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .field { margin-bottom: 14px; }
-  .field label { display: block; font-size: 12.5px; font-weight: 700; margin-bottom: 6px; color: var(--ink); }
-  .field input, .field textarea, .field select {
-    width: 100%; border: 1.5px solid var(--line); border-radius: 10px; padding: 11px 14px;
-    font-size: 14.2px; outline: none; transition: border-color .15s, box-shadow .15s;
-    background: var(--bg); color: var(--ink);
-  }
-  .field input:focus, .field textarea:focus, .field select:focus {
-    border-color: var(--teal); box-shadow: 0 0 0 4px rgba(14,140,127,.12); background: #fff;
-  }
-  .field textarea { resize: vertical; min-height: 108px; }
-  .form-note { font-size: 12px; color: var(--muted); margin-top: 12px; text-align: center; }
-
-  /* ================= FOOTER ================= */
-  footer { background: var(--navy-950); color: #8FA6BC; padding: 66px 0 30px; font-size: 13.6px; }
-  .foot-grid { display: grid; grid-template-columns: 1.7fr 1fr 1fr 1.25fr; gap: 40px; margin-bottom: 40px; }
-  .foot-grid .logo-name { color: #fff; }
-  .foot-grid .logo-tag { color: #6B8299; }
-  .foot-grid p { font-size: 13.2px; max-width: 300px; margin-top: 12px; }
-  .foot-grid h4 { color: #fff; font-size: 12.5px; font-weight: 750; margin-bottom: 15px; letter-spacing: .1em; text-transform: uppercase; }
-  .foot-grid ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .foot-grid ul a:hover { color: #7BE0D2; }
-  .foot-eeo {
-    border-top: 1px solid rgba(255,255,255,.09); padding-top: 24px; font-size: 12.3px;
-    color: #6B8299; line-height: 1.7; max-width: 820px;
-  }
-  .foot-bottom {
-    display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
-    font-size: 12.5px; color: #6B8299; margin-top: 22px;
-  }
-
-  /* ================= REVEAL ANIMATION ================= */
-  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
-  .reveal.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1; transform: none; transition: none; }
-    html { scroll-behavior: auto; }
-  }
-
-  /* ================= RESPONSIVE ================= */
-  @media (max-width: 1020px) {
-    .cat-grid { grid-template-columns: repeat(2, 1fr); }
-    .jobs-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .emp-grid { grid-template-columns: 1fr; }
-    .emp-panel { position: static; }
-    .testi-grid { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1fr; }
-    .foot-grid { grid-template-columns: 1fr 1fr; }
-    .hero-stats { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 740px) {
-    .util-bar .container { justify-content: center; }
-    .util-right { display: none; }
-    .nav-links, .nav-cta .btn { display: none; }
-    .hamburger { display: flex; }
-    header.nav-open .nav-links {
-      display: flex; position: absolute; top: 70px; left: 0; right: 0;
-      background: #fff; flex-direction: column; align-items: stretch; gap: 0;
-      border-bottom: 1px solid var(--line); box-shadow: var(--shadow-lift); padding: 8px 0;
-    }
-    header.nav-open .nav-links a { padding: 13px 22px; border-bottom: none; }
-    .jobs-grid, .svc-grid, .svc-bullets { grid-template-columns: 1fr; }
-    .cat-grid { grid-template-columns: 1fr 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    section { padding: 66px 0; }
-    .hero { padding: 64px 0 72px; }
-  }
-  /* small phones */
-  @media (max-width: 480px) {
-    .util-left .util-item + .util-item { display: none; }
-    .cat-grid { grid-template-columns: 1fr; }
-    .hero-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .stat { padding: 14px 16px; }
-    .stat b { font-size: 20px; }
-    .hero-actions .btn { flex: 1 1 auto; }
-    .how-card, .emp-panel, .contact-form { padding: 26px 22px; }
-    .foot-grid { grid-template-columns: 1fr; gap: 28px; }
-    .foot-bottom { justify-content: center; text-align: center; }
+  @media (max-width:760px){
+    nav.main{display:none}
+    .menu-btn{display:block}
+    section{padding:68px 0}
+    .hero{padding:60px 0 56px}
+    .sec-head{flex-direction:column;gap:8px}
+    .plat{grid-template-columns:1fr;gap:4px}
+    .plat .tag{text-align:left}
   }
 </style>
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-
-<!-- ================= UTILITY BAR ================= -->
-<div class="util-bar">
-  <div class="container">
-    <div class="util-left">
-      <span class="util-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><a href="tel:+18322688854">+1 (832) 268-8854</a></span>
-      <span class="util-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:support@kwikwork.online">support@kwikwork.online</a></span>
-    </div>
-    <div class="util-right">
-      <span class="util-item">Mon–Fri · 9:00 AM – 6:00 PM ET</span>
-      <span class="util-item"><a href="#employers">For employers</a></span>
-    </div>
-  </div>
-</div>
+<body id="top">
 
 <!-- ================= HEADER ================= -->
-<header id="header">
-  <div class="container nav">
-    <a href="#home" class="logo" aria-label="KwikWork home">
-      <span class="logo-mark">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-      </span>
-      <span class="logo-text">
-        <span class="logo-name">Kwik<em>Work</em></span>
-        <span class="logo-tag">Office Staffing &amp; Recruitment</span>
-      </span>
-    </a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#jobs">Find Jobs</a>
-      <a href="#categories">Categories</a>
-      <a href="#employers">Employers</a>
-      <a href="#how">How It Works</a>
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="wordmark" href="#top">SupaWorkers<i>.</i></a>
+    <nav class="main">
+      <a href="#services">What we do</a>
+      <a href="#how">How it works</a>
+      <a href="#fee">The fee</a>
+      <a href="#platforms">Platforms</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
     </nav>
-    <div class="nav-cta">
-      <a class="btn btn-navy btn-sm" href="mailto:support@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Request Staff</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a class="btn btn-solid btn-sm" href="mailto:info@supaworkers.com?subject=Support%20application">Apply for support</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">MENU</button>
     </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#services">What we do</a>
+    <a href="#how">How it works</a>
+    <a href="#fee">The fee</a>
+    <a href="#platforms">Platforms</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
   </div>
 </header>
 
-<main id="main">
-
 <!-- ================= HERO ================= -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <div class="eyebrow-line">Office staffing &amp; recruitment</div>
-        <h1>The right office hire, <em>made kwikly.</em></h1>
-        <p class="sub">KwikWork pairs job seekers with verified office roles — and delivers employers pre-screened candidates within 48 hours. Administration, customer service, accounting, front desk, and beyond.</p>
-        <div class="hero-actions">
-          <a class="btn btn-teal" href="#jobs">Browse open roles</a>
-          <a class="btn btn-ghost" href="#employers">Request staff</a>
-        </div>
-        <div class="hero-trust">
-          <span class="dots" aria-hidden="true"><span></span><span></span><span></span></span>
-          Trusted by 180+ companies across the US
-        </div>
+<section class="hero" style="padding-top:88px">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="kicker"><b>SupaWorkers</b> · Managed support for AI training work</span>
+      <h1>Get onboarded. Pass the <em>assessments.</em> Stay tasked.</h1>
+      <p class="lede">SupaWorkers is a support team for people earning on AI training platforms — Outlier, DataAnnotation, Alignerr, Mercor and others. We guide your onboarding, prepare you for screening, and solve the problems that stall accounts. You do the work; we take a percentage only when you're earning.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="mailto:info@supaworkers.com?subject=Support%20application&body=Hello%20SupaWorkers%2C%0A%0AI%27d%20like%20support%20getting%20started%20on%20AI%20training%20platforms.%0A%0AMy%20country%3A%0AMy%20languages%3A%0AMy%20experience%2Fskills%3A%0APlatforms%20I%20already%20use%20(if%20any)%3A">Apply for support</a>
+        <a class="btn btn-outline" href="#how">See how it works</a>
       </div>
-
-      <div>
-        <form class="search-panel" id="heroSearch">
-          <h2>Find your next office role</h2>
-          <p>Search open positions — no account needed.</p>
-          <label class="search-field">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-            <input type="text" placeholder="Job title or keyword" id="heroKeyword" aria-label="Keyword">
-          </label>
-          <label class="search-field">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            <select id="heroLocation" aria-label="Location">
-              <option value="">All locations</option>
-              <option>Remote</option><option>New York, NY</option><option>Chicago, IL</option><option>Los Angeles, CA</option>
-              <option>Houston, TX</option><option>Austin, TX</option>
-            </select>
-          </label>
-          <button class="btn btn-navy btn-block" type="submit">Search jobs</button>
-          <p class="search-note">Free for job seekers · New roles added weekly</p>
-        </form>
-        <div class="employer-mini">
-          <span>Hiring? Get shortlisted candidates in 48 hours.</span>
-          <a href="mailto:support@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Get started →</a>
-        </div>
+      <p class="cta-note">No upfront fees · Open to applicants worldwide · Replies within one business day</p>
+    </div>
+    <aside class="stuck reveal">
+      <span class="kicker">Where most people get stuck</span>
+      <h2>Three walls, one team</h2>
+      <div class="stuck-item">
+        <span class="n">01</span>
+        <b>The wait</b>
+        <span>Applications sit in review for weeks. Small, avoidable mistakes cause silent rejections.</span>
       </div>
-    </div>
-
-    <div class="hero-stats">
-      <div class="stat"><b>500+</b><small>Open roles</small></div>
-      <div class="stat"><b>2,400+</b><small>Registered candidates</small></div>
-      <div class="stat"><b>180+</b><small>Hiring companies</small></div>
-      <div class="stat"><b>48 hrs</b><small>Average shortlist time</small></div>
-    </div>
+      <div class="stuck-item">
+        <span class="n">02</span>
+        <b>The assessment</b>
+        <span>Most people fail on instruction-following and writing quality — not on knowledge.</span>
+      </div>
+      <div class="stuck-item">
+        <span class="n">03</span>
+        <b>The silence</b>
+        <span>Onboarded, but never given tasks. Usually a fixable profile or quality issue.</span>
+      </div>
+      <p style="font-size:13.5px;color:var(--muted);padding-top:16px">We address all three — for the life of your account.</p>
+    </aside>
   </div>
 </section>
 
-<!-- ================= TRUST STRIP ================= -->
-<div class="trust-strip">
-  <div class="container">
-    <div class="label">Trusted by teams at</div>
-    <div class="wordmarks" aria-label="Client companies">
-      <span>Sapphire Consulting</span><span>GreenField Logistics</span><span>SwiftCare</span>
-      <span>NovaTech</span><span>Meridian &amp; Co.</span><span>Heartland AgriCo</span>
-    </div>
+<!-- ================= PLATFORM STRIP ================= -->
+<div class="strip">
+  <div class="wrap strip-inner">
+    <span class="lbl">We work across</span>
+    <p class="names">Outlier<i>·</i>DataAnnotation<i>·</i>Alignerr<i>·</i>Mercor<i>·</i>Remotasks<i>·</i>Appen<i>·</i>Toloka<i>·</i>Prolific<i>·</i>Clickworker<i>·</i>TELUS Digital<i>·</i>and more</p>
   </div>
 </div>
 
-<!-- ================= CATEGORIES ================= -->
-<section id="categories">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Practice areas</span>
-      <h2>Browse by specialty</h2>
-      <p>Select a category to view live roles. New positions are added every week.</p>
-    </div>
-    <div class="cat-grid reveal" id="catGrid"></div>
-  </div>
-</section>
-
-<!-- ================= JOBS ================= -->
-<section id="jobs">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Current openings</span>
-      <h2>Open office positions</h2>
-      <p>Most roles are fully remote — work from anywhere in the US. Apply with our short application form (about 2 minutes) — most employers respond within two business days.</p>
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>What we help with</h2>
+      <span class="sec-num">SEC. 01 — SERVICES</span>
     </div>
 
-    <div class="filters reveal">
-      <label class="search-field">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        <input type="text" placeholder="Search jobs…" id="jobKeyword" aria-label="Search jobs">
-      </label>
-      <label class="search-field">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-        <select id="jobLocation" aria-label="Location filter">
-          <option value="">All locations</option>
-          <option>Remote</option><option>New York, NY</option><option>Chicago, IL</option><option>Los Angeles, CA</option>
-          <option>Houston, TX</option><option>Austin, TX</option>
-        </select>
-      </label>
-      <label class="search-field">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        <select id="jobCategory" aria-label="Category filter">
-          <option value="">All categories</option>
-          <option>Administration</option><option>Customer Service</option><option>Accounting &amp; Finance</option>
-          <option>Human Resources</option><option>Front Desk &amp; Reception</option><option>Data Entry</option>
-          <option>Executive Support</option><option>Office Management</option>
-        </select>
-      </label>
+    <div class="row reveal">
+      <span class="idx">01</span>
+      <div>
+        <span class="where">Onboarding</span>
+        <h3>Get accepted, properly</h3>
+        <p>Platform selection matched to your skills, languages and region — then an application done right the first time.</p>
+      </div>
+      <ul>
+        <li>Choosing the platforms that actually fit your profile and country</li>
+        <li>Profile and application setup that survives review</li>
+        <li>Identity, payment and tax steps explained plainly</li>
+        <li>What moves you through the queue — and what quietly gets people rejected</li>
+      </ul>
     </div>
 
-    <div class="jobs-grid" id="jobsGrid"></div>
+    <div class="row reveal">
+      <span class="idx">02</span>
+      <div>
+        <span class="where">Assessments</span>
+        <h3>Prepare, then pass</h3>
+        <p>Screening is a skill. We teach what evaluators reward and drill it with you until your responses land.</p>
+      </div>
+      <ul>
+        <li>What each platform's screening actually tests</li>
+        <li>Worked examples: strong answers versus weak ones, and why</li>
+        <li>Practice prompts with detailed written feedback</li>
+        <li>Instruction-precision and time management under exam conditions</li>
+        <li>You sit every assessment yourself — always, no exceptions</li>
+      </ul>
+    </div>
+
+    <div class="row reveal">
+      <span class="idx">03</span>
+      <div>
+        <span class="where">Tasking</span>
+        <h3>From idle to earning</h3>
+        <p>Onboarded but not tasked is the most common — and most fixable — problem in AI work.</p>
+      </div>
+      <ul>
+        <li>Why accounts go quiet, and the profile issues behind it</li>
+        <li>How quality scores and reviewer feedback actually work</li>
+        <li>Reading guidelines the way evaluators read your work</li>
+        <li>Working habits that keep task flow steady week after week</li>
+      </ul>
+    </div>
+
+    <div class="row reveal" style="border-bottom:none">
+      <span class="idx">04</span>
+      <div>
+        <span class="where">Ongoing support</span>
+        <h3>When things go wrong</h3>
+        <p>A direct line to people who have seen your problem before — for as long as we work together.</p>
+      </div>
+      <ul>
+        <li>Account reviews, warnings and appeals handled calmly and correctly</li>
+        <li>Payment delays and payout issues chased properly</li>
+        <li>Guideline and platform changes translated into plain English</li>
+        <li>New platform opportunities as the AI data industry shifts</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- ================= HOW IT WORKS ================= -->
 <section id="how">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow">How it works</span>
-      <h2>A straightforward process, both sides</h2>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>How it works</h2>
+      <span class="sec-num">SEC. 02 — PROCESS</span>
     </div>
-    <div class="how-grid">
-      <div class="how-card reveal">
-        <h3>For job seekers</h3>
-        <p>Four steps between you and your next role.</p>
-        <ol class="steps">
-          <li><span class="step-n">1</span><div><b>Browse open roles</b><span>Filter by specialty, location, and employment type — new jobs weekly.</span></div></li>
-          <li><span class="step-n">2</span><div><b>Complete the application form</b><span>Tap “Apply now” and fill in the short form — your details, experience, and resume. About 2 minutes, no account needed. Every applicant provides the same required details.</span></div></li>
-          <li><span class="step-n">3</span><div><b>Get shortlisted</b><span>Employers respond within two business days on average.</span></div></li>
-          <li><span class="step-n">4</span><div><b>Interview &amp; start</b><span>We follow up to make sure the placement goes smoothly.</span></div></li>
-        </ol>
+    <div class="steps reveal">
+      <div class="step">
+        <span class="n">STEP 1</span>
+        <b>Apply by email</b>
+        <span>Two minutes. Your country, languages, and experience — that's all we need to start.</span>
       </div>
-      <div class="how-card dark reveal">
-        <h3>For employers</h3>
-        <p>Qualified office staff, this week.</p>
-        <ol class="steps">
-          <li><span class="step-n">1</span><div><b>Send your job brief</b><span>Role, requirements, and salary — by email or the contact form.</span></div></li>
-          <li><span class="step-n">2</span><div><b>Receive a shortlist</b><span>Screened, reference-checked resumes delivered within 48 hours.</span></div></li>
-          <li><span class="step-n">3</span><div><b>Interview your picks</b><span>We help schedule interviews on your terms.</span></div></li>
-          <li><span class="step-n">4</span><div><b>Hire with confidence</b><span>Every placement is backed by a replacement guarantee.</span></div></li>
-        </ol>
+      <div class="step">
+        <span class="n">STEP 2</span>
+        <b>Honest review</b>
+        <span>We tell you frankly what's realistic for your profile. If we can't help, we say so.</span>
+      </div>
+      <div class="step">
+        <span class="n">STEP 3</span>
+        <b>Your plan</b>
+        <span>A platform shortlist, an application sequence, and a preparation schedule.</span>
+      </div>
+      <div class="step">
+        <span class="n">STEP 4</span>
+        <b>Onboard &amp; prepare</b>
+        <span>We guide setup, train you for assessments, and review your practice work.</span>
+      </div>
+      <div class="step">
+        <span class="n">STEP 5</span>
+        <b>Work &amp; earn</b>
+        <span>You complete the tasks; we stay on call. Our percentage applies only to what you earn.</span>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ================= EMPLOYERS / SERVICES ================= -->
-<section id="employers">
-  <div class="container">
-    <div class="emp-grid">
-      <div class="reveal">
-        <span class="eyebrow">For employers</span>
-        <h2 style="font-size:clamp(26px,3.4vw,38px);font-weight:800;margin-bottom:12px;">Staffing services built around your office</h2>
-        <p style="font-size:15.5px;color:var(--muted);">From a one-day receptionist to a permanent office manager, KwikWork delivers pre-screened office professionals on your schedule.</p>
-
-        <div class="svc-grid">
-          <div class="svc-card">
-            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-            <h3>Temporary staffing</h3>
-            <p>Cover vacations, medical leave, and busy seasons with vetted temps — often within 24 hours.</p>
-          </div>
-          <div class="svc-card">
-            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg></div>
-            <h3>Temp-to-hire</h3>
-            <p>Evaluate a candidate on the job before committing to a permanent offer.</p>
-          </div>
-          <div class="svc-card">
-            <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-            <h3>Direct hire</h3>
-            <p>Focused search and placement for permanent office roles, from coordinator to office manager.</p>
-          </div>
-        </div>
-
-        <ul class="svc-bullets">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>ID-verified, reference-checked candidates</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Skills &amp; software assessments</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Shortlists within 48 hours</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Replacement guarantee on placements</span></li>
-        </ul>
-      </div>
-
-      <aside class="emp-panel reveal">
-        <h3>Request staff</h3>
-        <p>Send us your job brief and receive a shortlist of pre-screened candidates within 48 hours.</p>
-        <a class="btn btn-teal" href="mailto:support@kwikwork.online?subject=Staffing%20request&body=Hello%20KwikWork%2C%0A%0AI%27d%20like%20to%20request%20staff.%20Here%20are%20the%20details%3A%0A%0ARole%3A%0ALocation%3A%0AStart%20date%3A%0AHours%2FSchedule%3A%0ASalary%20range%3A">Email your job brief</a>
-        <a class="btn btn-ghost" href="tel:+18322688854">Call +1 (832) 268-8854</a>
-        <p class="phone-line">Prefer to talk? <a href="tel:+18322688854">Speak with a recruiter</a></p>
-        <p class="fine">Free to list · You pay only when you hire.</p>
-      </aside>
+    <div class="how-note reveal">
+      <span class="kicker">A note on identity</span>
+      <p>Everything happens under <strong>your own name and account</strong>. We advise, prepare and troubleshoot — we never pose as you, and never ask for your login to work on your behalf. That rule protects your account, your earnings, and your reputation with the platforms.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= TESTIMONIALS ================= -->
-<section id="testimonials">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Client results</span>
-      <h2>What clients and candidates say</h2>
+<!-- ================= FEE ================= -->
+<section id="fee">
+  <div class="wrap price-grid">
+    <div class="reveal">
+      <span class="kicker"><b>SEC. 03</b> — THE FEE</span>
+      <h2>Free until <em>you're</em> paid.</h2>
+      <p class="big">No sign-up fee. No subscription. No charges for calls, guides or materials. We take a percentage of what you earn on the platforms while we support you — so our incentives are your incentives: get you onboarded, get you tasked, keep you earning.</p>
+      <p class="big" style="margin-top:16px">If you never earn, you never owe us anything.</p>
     </div>
-    <div class="testi-grid">
-      <div class="testi reveal">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p>“We needed a front desk coordinator urgently. KwikWork sent four solid resumes the next morning and we hired within the week. Very smooth.”</p>
-        <div class="testi-who">
-          <div class="avatar" style="background:#0A2540;">MO</div>
-          <div><b>Melissa O.</b><small>Clinic Manager · Austin, TX</small></div>
-        </div>
-      </div>
-      <div class="testi reveal">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p>“I found my current admin job through KwikWork. Applying by email took minutes and the employer replied the same day. I've recommended it to all my friends.”</p>
-        <div class="testi-who">
-          <div class="avatar" style="background:#0E8C7F;">ET</div>
-          <div><b>Emily T.</b><small>Administrative Coordinator · Chicago, IL</small></div>
-        </div>
-      </div>
-      <div class="testi reveal">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <p>“As a small business, agency fees were too much for us. KwikWork's pay-when-you-hire model was exactly what we needed. Our bookkeeper is superb.”</p>
-        <div class="testi-who">
-          <div class="avatar" style="background:#C58A2E;">FB</div>
-          <div><b>Fiona B.</b><small>Founder, retail startup · New York</small></div>
-        </div>
-      </div>
+    <div class="fee-card reveal">
+      <div class="rate">[X]%</div>
+      <div class="of">Of platform earnings, while managed</div>
+      <ul>
+        <li>Due only on money you have actually received</li>
+        <li>Settled monthly, with a written statement</li>
+        <li>Agreed in writing before any work begins</li>
+        <li>Stop working with us any time; no lock-in</li>
+      </ul>
+      <p class="fine">[Set your percentage here — e.g. "15% of platform earnings for the first 6 months, 10% after." Keep it specific: it builds trust.]</p>
     </div>
+  </div>
+</section>
+
+<!-- ================= PLATFORMS ================= -->
+<section id="platforms">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Platforms we know</h2>
+      <span class="sec-num">SEC. 04 — PLATFORMS</span>
+    </div>
+    <div class="plat-list reveal">
+      <div class="plat"><b>Outlier</b><span>Expert AI training across dozens of domains — writing, coding, maths, sciences. A Scale AI company.</span><span class="tag">Expert</span></div>
+      <div class="plat"><b>DataAnnotation</b><span>Writing and coding tasks for model training, steady per-task pay.</span><span class="tag">Writing · Code</span></div>
+      <div class="plat"><b>Alignerr</b><span>Expert AI tutoring and labelling, domain-qualified contributors.</span><span class="tag">Expert</span></div>
+      <div class="plat"><b>Mercor</b><span>Interview-based AI work marketplace with competitive rates.</span><span class="tag">Marketplace</span></div>
+      <div class="plat"><b>Remotasks</b><span>Entry-level AI data labelling — a common first step into AI work.</span><span class="tag">Entry</span></div>
+      <div class="plat"><b>Appen / CrowdGen</b><span>Long-running crowdsourcing: search evaluation, data, audio and more.</span><span class="tag">Entry</span></div>
+      <div class="plat"><b>Toloka</b><span>AI data tasks with broad global availability.</span><span class="tag">Global</span></div>
+      <div class="plat"><b>Prolific</b><span>Paid academic research studies — fair per-study pay.</span><span class="tag">Research</span></div>
+      <div class="plat"><b>Clickworker</b><span>Microtasks and UHRS access; flexible, low barrier to entry.</span><span class="tag">Entry</span></div>
+      <div class="plat"><b>TELUS Digital</b><span>Search engine and ads rater programs, part-time.</span><span class="tag">Rating</span></div>
+      <div class="plat"><b>Soul AI</b><span>Expert AI training tasks for Indian and global contributors.</span><span class="tag">Expert</span></div>
+      <div class="plat"><b>Stellar AI</b><span>AI data work with domain-specialist tracks.</span><span class="tag">Expert</span></div>
+      <div class="plat"><b>Micro1</b><span>AI-vetted talent marketplace for longer AI engagements.</span><span class="tag">Marketplace</span></div>
+      <div class="plat"><b>Pareto.AI</b><span>Data collection and labelling for leading AI labs.</span><span class="tag">Data</span></div>
+    </div>
+    <p class="plat-note">…plus new platforms as they emerge. Availability, pay and entry requirements vary by country, language and demand — your intro call covers what's realistic where you live.</p>
   </div>
 </section>
 
 <!-- ================= FAQ ================= -->
 <section id="faq">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow">FAQ</span>
-      <h2>Frequently asked questions</h2>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Straight answers</h2>
+      <span class="sec-num">SEC. 05 — FAQ</span>
     </div>
     <div class="faq-wrap reveal">
-      <details class="faq">
-        <summary>Is KwikWork free for job seekers?</summary>
-        <div class="faq-body">Yes — always. Browsing and applying costs nothing and no account is required. Employers cover all placement costs.</div>
+      <details>
+        <summary>Is this allowed by the platforms?</summary>
+        <div class="faq-body">Guidance, coaching and preparation are allowed. What platforms prohibit — and what we never do — is sharing accounts, working under someone else's identity, or completing assessments for another person. You apply, sit assessments and complete every task yourself. We make sure you do those things well.</div>
       </details>
-      <details class="faq">
-        <summary>How do I apply for a role?</summary>
-        <div class="faq-body">Tap “Apply now” on any listing and complete the short application form (about 2 minutes). Every applicant provides the same required details — so nothing is missed. We forward complete applications to the employer the same day.</div>
+      <details>
+        <summary>What does it cost?</summary>
+        <div class="faq-body">Nothing upfront. We take a percentage of what you earn on the platforms while under our management, settled monthly on money you've actually received. The exact rate is agreed in writing before we begin.</div>
       </details>
-      <details class="faq">
-        <summary>How quickly can employers see candidates?</summary>
-        <div class="faq-body">Typically within 48 hours of receiving your job brief. For temporary cover, we can often provide same-day or next-day candidates.</div>
+      <details>
+        <summary>Do you guarantee I'll be accepted or pass?</summary>
+        <div class="faq-body">No — and you should be suspicious of anyone who does. Acceptance depends on each platform's demand, your region and your skills. What we control is preparation: avoiding the mistakes that sink applications, and getting your assessment technique to the standard reviewers reward. That meaningfully improves your odds; it doesn't guarantee them.</div>
       </details>
-      <details class="faq">
-        <summary>What does it cost employers?</summary>
-        <div class="faq-body">Listing a role is free. A placement fee applies only when you hire — contact us for a quote tailored to the role. Every placement includes a replacement guarantee.</div>
+      <details>
+        <summary>Which countries do you work with?</summary>
+        <div class="faq-body">We take applicants worldwide. Opportunities differ significantly by country and language — some platforms are restricted by region, others pay more for particular languages or time zones. The intro call is where we tell you honestly what's realistic where you are.</div>
       </details>
-      <details class="faq">
-        <summary>How are candidates vetted?</summary>
-        <div class="faq-body">Every candidate is ID-verified, reference-checked, and screened for core office skills and software proficiency before joining a shortlist.</div>
+      <details>
+        <summary>Do I need experience?</summary>
+        <div class="faq-body">For general tasks, strong written English and careful attention to detail are often enough. For specialist tracks — law, medicine, coding, finance, advanced maths — platforms pay more but want verifiable expertise. Complete beginners get onboarded with us regularly; it just takes a little longer.</div>
       </details>
-      <details class="faq">
-        <summary>Which locations do you serve?</summary>
-        <div class="faq-body">All 50 states — on-site placements in major metros plus fully remote roles across the country.</div>
+      <details>
+        <summary>How long does onboarding take?</summary>
+        <div class="faq-body">Anywhere from a few days to several weeks, depending on the platform and demand — queue times genuinely fluctuate. We manage that waiting time productively: applying across multiple platforms and preparing you meanwhile, so you're not sitting on one application.</div>
+      </details>
+      <details>
+        <summary>What do I need to take part?</summary>
+        <div class="faq-body">A reliable internet connection, a laptop or desktop computer (most platforms don't allow phone work), a quiet workspace, and valid identification. That's the honest minimum.</div>
+      </details>
+      <details>
+        <summary>Someone offering "guaranteed passes" contacted me. Should I take it?</summary>
+        <div class="faq-body">No. That offer — someone sitting the assessment for you, or selling leaked answers — is the most reliable way to lose your account, forfeit unpaid earnings, and be permanently banned across platforms. It's also the reason a service like ours insists on doing things the honest way.</div>
       </details>
     </div>
   </div>
@@ -756,284 +478,84 @@
 
 <!-- ================= CONTACT ================= -->
 <section id="contact">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Contact</span>
-      <h2>Talk to a recruiter today</h2>
-      <p>Questions about hiring or finding work? We reply within one business day.</p>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <div class="info-card">
-          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
-          <div><b>Call or text</b><p><a href="tel:+18322688854">+1 (832) 268-8854</a></p></div>
-        </div>
-        <div class="info-card">
-          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
-          <div><b>Email</b><p><a href="mailto:support@kwikwork.online">support@kwikwork.online</a></p></div>
-        </div>
-        <div class="info-card">
-          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><b>Coverage</b><p>Remote-first — serving all 50 states</p></div>
-        </div>
-        <div class="info-card">
-          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-          <div><b>Hours</b><p>Mon – Fri · 9:00 AM – 6:00 PM ET</p></div>
-        </div>
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="kicker"><b>SEC. 06</b> — CONTACT</span>
+      <h2>Start with an <em>email.</em></h2>
+      <p class="lede">Tell us three things: your country, your languages, and your experience or skills. We'll reply within one business day with an honest read on what's possible for you — and what the next step would be.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="mailto:info@supaworkers.com?subject=Support%20application&body=Hello%20SupaWorkers%2C%0A%0AI%27d%20like%20support%20getting%20started%20on%20AI%20training%20platforms.%0A%0AMy%20country%3A%0AMy%20languages%3A%0AMy%20experience%2Fskills%3A%0APlatforms%20I%20already%20use%20(if%20any)%3A">Email info@supaworkers.com</a>
+        <a class="btn btn-outline" href="#services">Re-read what we do</a>
       </div>
-
-      <form class="contact-form reveal" id="contactForm">
-        <h3>Send us a message</h3>
-        <p>Job seekers are taken straight to our application form; employer and general inquiries go by email.</p>
-        <div class="form-row">
-          <div class="field">
-            <label for="cfName">Full name</label>
-            <input type="text" id="cfName" placeholder="e.g. Jane Smith" required>
-          </div>
-          <div class="field">
-            <label for="cfRole">I am a…</label>
-            <select id="cfRole">
-              <option>Job seeker</option>
-              <option>Employer hiring</option>
-              <option>Just asking a question</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label for="cfSubject">Subject</label>
-          <input type="text" id="cfSubject" placeholder="What is this about?" required>
-        </div>
-        <div class="field">
-          <label for="cfMessage">Message</label>
-          <textarea id="cfMessage" placeholder="Tell us more…" required></textarea>
-        </div>
-        <button class="btn btn-navy btn-block" type="submit">Send by email</button>
-        <p class="form-note">Job seekers: you’ll be redirected to the application form (required). Email opens for employer and general inquiries.</p>
-      </form>
+    </div>
+    <div class="contact-side reveal">
+      <div class="blk">
+        <span class="kicker">Email</span>
+        <a class="big" href="mailto:info@supaworkers.com">info@supaworkers.com</a>
+      </div>
+      <div class="blk">
+        <span class="kicker">Response time</span>
+        <span class="big">Within one business day</span>
+      </div>
+      <div class="blk">
+        <span class="kicker">Hours</span>
+        <span>Monday to Friday</span>
+      </div>
+      <div class="blk">
+        <span class="kicker">Cost to apply</span>
+        <span>Nothing — ever</span>
+      </div>
     </div>
   </div>
 </section>
 
-</main>
-
 <!-- ================= FOOTER ================= -->
 <footer>
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <a href="#home" class="logo" aria-label="KwikWork home">
-          <span class="logo-mark">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-          </span>
-          <span class="logo-text">
-            <span class="logo-name">Kwik<em style="color:#5ED6C6;font-style:normal;">Work</em></span>
-            <span class="logo-tag">Office Staffing &amp; Recruitment</span>
-          </span>
-        </a>
-        <p>The right office hire, made kwikly. Verified candidates for employers, real opportunities for job seekers — across all 50 states.</p>
+  <div class="wrap foot-inner">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="wordmark" href="#top">SupaWorkers<i>.</i></a>
+        <p>Managed support for people earning on AI training platforms — worldwide. You do the work; we handle the learning curve.</p>
       </div>
-      <div>
-        <h4>Job seekers</h4>
-        <ul>
-          <li><a href="#jobs">Browse jobs</a></li>
-          <li><a href="#categories">Specialties</a></li>
-          <li><a href="#how">How it works</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
+      <div class="foot-col">
+        <b>Site</b>
+        <a href="#services">What we do</a>
+        <a href="#how">How it works</a>
+        <a href="#fee">The fee</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#faq">FAQ</a>
       </div>
-      <div>
-        <h4>Employers</h4>
-        <ul>
-          <li><a href="#employers">Our services</a></li>
-          <li><a href="#employers">Request staff</a></li>
-          <li><a href="#how">Our process</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:+18322688854">+1 (832) 268-8854</a></li>
-          <li><a href="mailto:support@kwikwork.online">support@kwikwork.online</a></li>
-          <li>Mon – Fri · 9 AM – 6 PM ET</li>
-        </ul>
+      <div class="foot-col">
+        <b>Contact</b>
+        <a href="mailto:info@supaworkers.com">info@supaworkers.com</a>
+        <a href="#contact">Apply for support</a>
       </div>
     </div>
-    <p class="foot-eeo">KwikWork is an equal opportunity recruitment agency. We celebrate diversity and are committed to creating an inclusive environment for all clients and candidates. All qualified applicants receive consideration without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or veteran status.</p>
-    <div class="foot-bottom">
-      <span>© 2026 KwikWork. All rights reserved.</span>
-      <span>kwikwork.online · Privacy Policy · Terms of Service</span>
+    <div class="foot-legal">
+      <p>SupaWorkers is an independent guidance and support service. We are not affiliated with, endorsed by, or connected to any platform named on this site. All platform names and trademarks are the property of their respective owners. Availability of work varies by country, language and platform demand.</p>
+      <p>© 2026 SupaWorkers. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 <script>
-/* ==================================================================
-   KWICKWORK SITE DATA & LOGIC (US edition, professional build)
-   ------------------------------------------------------------------
-   TO ADD / EDIT / REMOVE JOBS: edit the JOBS list below.
-   TO CHANGE WHERE APPLICATIONS GO: edit SITE_EMAIL (must exist —
-   set up forwarding in Hostinger hPanel → Emails).
-   ================================================================== */
-
-var SITE_EMAIL = "support@kwikwork.online";
-var SITE_PHONE = "+18322688854";
-var APPLY_FORM = "https://forms.fillout.com/t/kLSRLen5kjus"; // required application form — all applicants go through this
-
-var JOBS = [
-  { title: "Virtual Receptionist", company: "Sapphire Consulting Group", location: "Remote", category: "Front Desk & Reception", type: "Remote", salary: "$20 – $22 /hr", posted: "2 days ago", desc: "Answer calls, route inquiries and manage appointment scheduling from home. Clear phone manner, quiet workspace and reliable high-speed internet required." },
-  { title: "Administrative Coordinator (Remote)", company: "GreenField Logistics", location: "Remote", category: "Administration", type: "Remote", salary: "$21 – $25 /hr", posted: "3 days ago", desc: "Manage calendars, documentation and vendor coordination for a distributed team. 2+ years of admin experience and strong Google Workspace skills." },
-  { title: "Customer Service Representative", company: "SwiftCare Insurance", location: "Remote", category: "Customer Service", type: "Remote", salary: "$20 – $23 /hr", posted: "5 days ago", desc: "Support policyholders by phone, email and chat from your home office. Excellent written and verbal communication; quiet workspace required." },
-  { title: "Data Entry Clerk", company: "BrightBooks Accounting", location: "Remote", category: "Data Entry", type: "Remote", salary: "$20 – $21 /hr", posted: "1 day ago", desc: "Enter and verify records in Excel and accounting software from home. Fast, accurate typing and strong attention to detail required." },
-  { title: "HR Assistant", company: "Nova Tech Solutions", location: "Remote", category: "Human Resources", type: "Remote", salary: "$23 – $27 /hr", posted: "1 week ago", desc: "Support recruiting, onboarding and HR records for a remote-first company. Degree in HR or business; SHRM certification a plus." },
-  { title: "Executive Virtual Assistant", company: "Meridian Trading Co.", location: "Remote", category: "Executive Support", type: "Remote", salary: "$27 – $30 /hr", posted: "4 days ago", desc: "Manage a CEO's calendar, inbox, travel and confidential documents fully remotely. 4+ years supporting C-suite executives." },
-  { title: "Staff Accountant", company: "First Choice Credit Union", location: "Remote", category: "Accounting & Finance", type: "Remote", salary: "$26 – $30 /hr", posted: "6 days ago", desc: "Remote month-end close, reconciliations and reporting. Accounting degree; QuickBooks experience and CPA progress an advantage." },
-  { title: "Office Manager", company: "Heartland AgriCo", location: "Chicago, IL", category: "Office Management", type: "Full-time", salary: "$28 – $30 /hr", posted: "1 week ago", desc: "On-site leadership of office operations, procurement and support staff. 5+ years of office management experience required." },
-  { title: "Call Center Agent (Work-from-Home)", company: "LinkPlus Telecom", location: "Remote", category: "Customer Service", type: "Remote", salary: "$20 – $22 /hr", posted: "2 days ago", desc: "Handle customer calls from your home office with paid training provided. USB headset and wired internet required; recent grads welcome." },
-  { title: "Personal Assistant", company: "HomeHaven Realty", location: "Los Angeles, CA", category: "Executive Support", type: "Hybrid", salary: "$24 – $28 /hr", posted: "3 days ago", desc: "Hybrid role supporting a property entrepreneur — three office days, two remote. Organized, discreet and proactive." },
-  { title: "Bookkeeper (Part-time)", company: "Cresta Interiors", location: "Remote", category: "Accounting & Finance", type: "Part-time", salary: "$24 – $30 /hr", posted: "5 days ago", desc: "Keep weekly accounts in QuickBooks, prepare invoices and track expenses. 15–20 hours per week, fully remote and flexible." },
-  { title: "Operations Trainee (Remote)", company: "Golden Grain Foods", location: "Remote", category: "Administration", type: "Remote", salary: "$20 – $21 /hr", posted: "1 week ago", desc: "12-month remote trainee program rotating through admin, HR and operations. Recent graduates encouraged to apply." }
-];
-
-var CATEGORIES = [
-  { name: "Administration", count: "120+ open roles" },
-  { name: "Customer Service", count: "95+ open roles" },
-  { name: "Accounting & Finance", count: "80+ open roles" },
-  { name: "Human Resources", count: "45+ open roles" },
-  { name: "Front Desk & Reception", count: "70+ open roles" },
-  { name: "Data Entry", count: "55+ open roles" },
-  { name: "Executive Support", count: "30+ open roles" },
-  { name: "Office Management", count: "35+ open roles" }
-];
-
-var BADGE = { "Full-time": "b-full", "Part-time": "b-part", "Remote": "b-remote", "Hybrid": "b-hybrid", "Contract": "b-contract" };
-var LOGO_COLORS = ["#0A2540", "#0E8C7F", "#C58A2E", "#1D5DBF", "#0B6F65", "#5B3FBF", "#92610F", "#3E5470"];
-
-var I_BUILDING = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg>';
-var I_PIN = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>';
-var I_CLOCK = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>';
-var I_ARROW = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
-
-function initials(name) {
-  return name.split(/\s+/).filter(function (w) { return /^[A-Za-z]/.test(w); })
-    .slice(0, 2).map(function (w) { return w[0].toUpperCase(); }).join("") || "KW";
-}
-function applyLink(job) {
-  return APPLY_FORM;
-}
-
-/* ---------- render category cards ---------- */
-var catGrid = document.getElementById("catGrid");
-CATEGORIES.forEach(function (cat) {
-  var icons = {
-    "Administration": '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
-    "Customer Service": '<path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>',
-    "Accounting & Finance": '<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
-    "Human Resources": '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
-    "Front Desk & Reception": '<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
-    "Data Entry": '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h4M6 12h4M6 16h4M14 8h4M14 12h4M14 16h4"/>',
-    "Executive Support": '<path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/>',
-    "Office Management": '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/>'
-  };
-  var a = document.createElement("button");
-  a.className = "cat-card";
-  a.type = "button";
-  a.setAttribute("data-cat", cat.name);
-  a.innerHTML = '<div class="cat-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + (icons[cat.name] || icons["Administration"]) + '</svg></div><h3>' + cat.name + '</h3><p>' + cat.count + '</p><span class="arrow">' + I_ARROW + "</span>";
-  catGrid.appendChild(a);
-});
-
-/* ---------- render & filter jobs ---------- */
-var jobsGrid = document.getElementById("jobsGrid");
-var kwInput = document.getElementById("jobKeyword");
-var locSelect = document.getElementById("jobLocation");
-var catSelect = document.getElementById("jobCategory");
-
-function renderJobs() {
-  var kw = kwInput.value.trim().toLowerCase();
-  var loc = locSelect.value;
-  var cat = catSelect.value;
-  var list = JOBS.filter(function (j) {
-    var matchKw = !kw || (j.title + " " + j.company + " " + j.category + " " + j.desc).toLowerCase().indexOf(kw) !== -1;
-    var matchLoc = !loc || j.location === loc;
-    var matchCat = !cat || j.category === cat;
-    return matchKw && matchLoc && matchCat;
+  // Mobile menu
+  var mb=document.getElementById('menuBtn'),mn=document.getElementById('mobileNav');
+  mb.addEventListener('click',function(){
+    var open=mn.classList.toggle('open');
+    mb.setAttribute('aria-expanded',open?'true':'false');
   });
-  jobsGrid.innerHTML = "";
-  if (!list.length) {
-    jobsGrid.innerHTML = '<div class="empty"><b>No roles match your search</b>Try different keywords or clear the filters — or <a style="color:var(--teal-dark);font-weight:700;" href="#contact">send us a message</a> and we\'ll look out for you.</div>';
-    return;
+  mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');mb.setAttribute('aria-expanded','false');})});
+
+  // Reveal on scroll (respects reduced motion)
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver'in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
   }
-  list.forEach(function (j) {
-    var color = LOGO_COLORS[JOBS.indexOf(j) % LOGO_COLORS.length];
-    var card = document.createElement("article");
-    card.className = "job-card";
-    card.innerHTML =
-      '<div class="job-top"><div class="job-logo" style="background:' + color + ';">' + initials(j.company) + '</div><span class="badge ' + (BADGE[j.type] || "b-contract") + '">' + j.type + "</span></div>" +
-      "<h3>" + j.title + "</h3>" +
-      '<div class="job-co">' + I_BUILDING + " " + j.company + ' <span class="sep">·</span> ' + I_PIN + " " + j.location + "</div>" +
-      '<p class="job-desc">' + j.desc + "</p>" +
-      '<div class="job-meta"><span class="job-salary">' + j.salary + '</span><span class="posted">' + I_CLOCK + " " + j.posted + "</span></div>" +
-      '<a class="btn btn-navy btn-sm btn-block" href="' + applyLink(j) + '" target="_blank" rel="noopener">Apply now ' + I_ARROW + "</a>";
-    jobsGrid.appendChild(card);
-  });
-}
-
-kwInput.addEventListener("input", renderJobs);
-locSelect.addEventListener("change", renderJobs);
-catSelect.addEventListener("change", renderJobs);
-renderJobs();
-
-/* ---------- category cards → filter jobs ---------- */
-catGrid.addEventListener("click", function (e) {
-  var card = e.target.closest(".cat-card");
-  if (!card) return;
-  catSelect.value = card.getAttribute("data-cat");
-  renderJobs();
-  document.getElementById("jobs").scrollIntoView({ behavior: "smooth" });
-});
-
-/* ---------- hero search → jobs ---------- */
-document.getElementById("heroSearch").addEventListener("submit", function (e) {
-  e.preventDefault();
-  kwInput.value = document.getElementById("heroKeyword").value;
-  locSelect.value = document.getElementById("heroLocation").value;
-  renderJobs();
-  document.getElementById("jobs").scrollIntoView({ behavior: "smooth" });
-});
-
-/* ---------- contact form → email app ---------- */
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  var name = document.getElementById("cfName").value.trim();
-  var role = document.getElementById("cfRole").value;
-  if (role === "Job seeker") { window.open(APPLY_FORM, "_blank"); return; }
-  var subject = document.getElementById("cfSubject").value.trim();
-  var message = document.getElementById("cfMessage").value.trim();
-  var body = "Hello KwikWork,\n\n" + message + "\n\n— " + name + " (" + role + ")";
-  window.location.href = "mailto:" + SITE_EMAIL + "?subject=" + encodeURIComponent("[KwikWork] " + subject) + "&body=" + encodeURIComponent(body);
-});
-
-/* ---------- mobile menu ---------- */
-var header = document.getElementById("header");
-document.getElementById("hamburger").addEventListener("click", function () {
-  header.classList.toggle("nav-open");
-});
-header.querySelectorAll(".nav-links a").forEach(function (a) {
-  a.addEventListener("click", function () { header.classList.remove("nav-open"); });
-});
-
-/* ---------- subtle reveal-on-scroll ---------- */
-if ("IntersectionObserver" in window) {
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
-} else {
-  document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
-}
 </script>
 </body>
 </html>

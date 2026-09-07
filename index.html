@@ -252,6 +252,52 @@
     .sec-head{flex-direction:column;gap:8px}
     .plat-grid{grid-template-columns:1fr}
   }
+
+/* ---------- apply form modal ---------- */.apply-overlay{position:fixed;inset:0;background:rgba(26,24,21,.55);display:none;align-items:flex-start;justify-content:center;padding:32px 16px;overflow-y:auto;z-index:100;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.apply-overlay.open{display:flex}
+.apply-panel{position:relative;width:100%;max-width:600px;background:var(--paper);border:1px solid var(--ink);border-radius:2px;padding:36px 38px 32px;margin:auto 0;box-shadow:0 30px 60px -20px rgba(26,24,21,.45);animation:applyIn .25s ease}
+.apply-panel::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--green)}
+@keyframes applyIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.apply-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border:1px solid transparent;background:none;font:400 24px/1 var(--sans);color:var(--muted);cursor:pointer;border-radius:2px}
+.apply-close:hover{color:var(--ink);border-color:var(--hair)}
+.apply-panel h2{font-size:clamp(26px,3.4vw,34px);margin:12px 0 10px}
+.apply-panel h2 em{font-style:italic;color:var(--green)}
+.apply-intro{font-size:15px;color:var(--ink-soft);margin-bottom:26px;max-width:470px}
+.apply-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+.apply-field{display:flex;flex-direction:column;gap:6px;position:relative}
+.apply-field.full{grid-column:1/-1}
+.apply-field>label,.apply-field>.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.apply-field>label i{font-style:normal;color:var(--green)}
+.apply-field>label small{font-family:var(--sans);letter-spacing:0;text-transform:none;font-size:11.5px}
+.apply-field input,.apply-field select,.apply-field textarea{font-family:var(--sans);font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--hair);border-radius:2px;padding:11px 13px;width:100%;transition:border-color .15s ease,box-shadow .15s ease;-webkit-appearance:none;appearance:none}
+.apply-field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236E675D' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:36px}
+.apply-field textarea{min-height:96px;resize:vertical;line-height:1.5}
+.apply-field input::placeholder,.apply-field textarea::placeholder{color:#A9A296}
+.apply-field input:focus,.apply-field select:focus,.apply-field textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(31,92,72,.12)}
+.apply-field .hint{font-size:12.5px;color:var(--muted)}
+.apply-chips{display:flex;flex-wrap:wrap;gap:8px}
+.apply-chips label{font-size:13.5px;color:var(--ink-soft);border:1px solid var(--hair);border-radius:2px;padding:7px 12px;cursor:pointer;display:inline-flex;align-items:center;background:#fff;user-select:none;transition:border-color .15s ease,background .15s ease,color .15s ease}
+.apply-chips label:hover{border-color:var(--green)}
+.apply-chips input{position:absolute;opacity:0;width:0;height:0}
+.apply-chips label.on,.apply-chips label:has(input:checked){border-color:var(--green);background:var(--green);color:var(--paper)}
+.apply-chips label:has(input:focus-visible){outline:2px solid var(--green);outline-offset:2px}
+.apply-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:26px;padding-top:20px;border-top:1px solid var(--hair)}
+.apply-foot .note{font-size:12.5px;color:var(--muted)}
+.apply-status{margin-top:16px;font-size:14px;padding:12px 14px;border-radius:2px;display:none}
+.apply-status.err{display:block;background:#FBEDEA;color:#8A2C1F;border:1px solid #EFC7BF}
+.apply-success{text-align:center;padding:28px 8px 12px;display:none}
+.apply-success .tick{width:52px;height:52px;border:1px solid var(--green);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--green);font-size:24px;margin-bottom:18px}
+.apply-success h3{font-size:26px;margin-bottom:10px}
+.apply-success p{color:var(--ink-soft);font-size:15px;max-width:400px;margin:0 auto 22px}
+.apply-panel.sent form{display:none}
+.apply-panel.sent .apply-success{display:block}
+.apply-hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+body.apply-lock{overflow:hidden}
+@media (max-width:600px){
+  .apply-overlay{padding:0;align-items:stretch}
+  .apply-panel{padding:28px 20px 24px;border-left:0;border-right:0;border-radius:0;min-height:100%}
+  .apply-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body id="top">
@@ -425,7 +471,7 @@
     <div class="steps reveal">
       <div class="step">
         <span class="n">STEP 1</span>
-        <b>Apply by email</b>
+        <b>Apply online</b>
         <span>Two minutes. Your country, languages, and experience — that's all we need to start.</span>
       </div>
       <div class="step">
@@ -624,10 +670,10 @@
   <div class="wrap contact-grid">
     <div class="reveal">
       <span class="kicker"><b>SEC. 06</b> — CONTACT</span>
-      <h2>Start with an <em>email.</em></h2>
+      <h2>Start with a <em>two-minute form.</em></h2>
       <p class="lede">Tell us three things: your country, your languages, and your experience or skills. We'll reply within one business day with an honest read on what's possible for you — and what the next step would be.</p>
       <div class="cta-row">
-        <a class="btn btn-solid" href="mailto:info@supaworkers.com?subject=Support%20application&body=Hello%20SupaWorkers%2C%0A%0AI%27d%20like%20support%20getting%20started%20on%20AI%20training%20platforms.%0A%0AMy%20country%3A%0AMy%20languages%3A%0AMy%20experience%2Fskills%3A%0APlatforms%20I%20already%20use%20(if%20any)%3A">Email info@supaworkers.com</a>
+        <a class="btn btn-solid" href="mailto:info@supaworkers.com?subject=Support%20application&body=Hello%20SupaWorkers%2C%0A%0AI%27d%20like%20support%20getting%20started%20on%20AI%20training%20platforms.%0A%0AMy%20country%3A%0AMy%20languages%3A%0AMy%20experience%2Fskills%3A%0APlatforms%20I%20already%20use%20(if%20any)%3A">Apply for support</a>
         <a class="btn btn-outline" href="#services">Re-read what we do</a>
       </div>
     </div>
@@ -716,6 +762,162 @@
   }else{
     document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
   }
+</script>
+
+<div class="apply-overlay" id="applyOverlay" role="dialog" aria-modal="true" aria-labelledby="applyTitle">
+  <div class="apply-panel" id="applyPanel">
+    <button class="apply-close" type="button" id="applyClose" aria-label="Close">×</button>
+    <span class="kicker"><b>Apply</b> — takes two minutes</span>
+    <h2 id="applyTitle">Tell us <em>three things.</em></h2>
+    <p class="apply-intro">Your country, your languages, and your experience. We'll reply within one business day with an honest read on what's realistic for you.</p>
+
+    <form id="applyForm" novalidate>
+      <input type="text" name="_honey" class="apply-hp" tabindex="-1" autocomplete="off">
+      <div class="apply-grid">
+        <div class="apply-field">
+          <label for="apName">Full name <i>*</i></label>
+          <input id="apName" name="name" type="text" required autocomplete="name" placeholder="Adaeze Okafor">
+        </div>
+        <div class="apply-field">
+          <label for="apEmail">Email <i>*</i></label>
+          <input id="apEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+        </div>
+        <div class="apply-field">
+          <label for="apCountry">Country <i>*</i></label>
+          <input id="apCountry" name="country" type="text" required autocomplete="country-name" placeholder="Nigeria">
+        </div>
+        <div class="apply-field">
+          <label for="apLang">Languages <i>*</i></label>
+          <input id="apLang" name="languages" type="text" required placeholder="English (fluent), Yoruba (native)">
+        </div>
+        <div class="apply-field full">
+          <label for="apExp">Experience / skills <i>*</i></label>
+          <textarea id="apExp" name="experience" required placeholder="e.g. BSc Computer Science, 2 years freelance writing, comfortable with Python — or: complete beginner, strong written English."></textarea>
+          <span class="hint">Education, work, and any specialism (coding, law, medicine, maths…). A few lines is plenty.</span>
+        </div>
+        <div class="apply-field full">
+          <span class="lbl">Platforms you already use</span>
+          <div class="apply-chips" id="apPlatforms">
+            <label><input type="checkbox" name="platforms" value="None yet">None yet</label>
+            <label><input type="checkbox" name="platforms" value="Outlier">Outlier</label>
+            <label><input type="checkbox" name="platforms" value="DataAnnotation">DataAnnotation</label>
+            <label><input type="checkbox" name="platforms" value="Alignerr">Alignerr</label>
+            <label><input type="checkbox" name="platforms" value="Mercor">Mercor</label>
+            <label><input type="checkbox" name="platforms" value="Appen">Appen</label>
+            <label><input type="checkbox" name="platforms" value="Toloka">Toloka</label>
+            <label><input type="checkbox" name="platforms" value="Clickworker">Clickworker</label>
+            <label><input type="checkbox" name="platforms" value="TELUS Digital">TELUS Digital</label>
+            <label><input type="checkbox" name="platforms" value="Other">Other</label>
+          </div>
+        </div>
+        <div class="apply-field full">
+          <label for="apSetup">Your setup</label>
+          <select id="apSetup" name="setup">
+            <option value="">Select one…</option>
+            <option>Laptop/desktop + reliable internet</option>
+            <option>Laptop/desktop, but internet is unreliable</option>
+            <option>Phone only for now</option>
+          </select>
+        </div>
+        <div class="apply-field full">
+          <label for="apNote">Anything else <small>(optional)</small></label>
+          <textarea id="apNote" name="message" style="min-height:70px" placeholder="A question, a specific problem you're stuck on, or ask for your rate quote."></textarea>
+        </div>
+      </div>
+
+      <div class="apply-status" id="applyStatus" role="alert"></div>
+
+      <div class="apply-foot">
+        <button class="btn btn-solid" type="submit" id="applySubmit">Send application</button>
+        <span class="note">No upfront fees · Replies within one business day</span>
+      </div>
+    </form>
+
+    <div class="apply-success">
+      <div class="tick">✓</div>
+      <h3 id="applyOkTitle">Application received.</h3>
+      <p id="applyOkText">Thanks — we'll reply to <b id="applySentTo"></b> within one business day with an honest read on what's realistic for you.</p>
+      <button class="btn btn-outline" type="button" id="applyDone">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var TO="info@supaworkers.com";
+  var ENDPOINT="https://formsubmit.co/ajax/"+TO;   // free, no key. First submission triggers a one-time "Activate" email to this inbox.
+
+  var ov=document.getElementById('applyOverlay'),panel=document.getElementById('applyPanel'),
+      form=document.getElementById('applyForm'),status=document.getElementById('applyStatus'),
+      submit=document.getElementById('applySubmit'),lastFocus=null;
+
+  function openModal(){lastFocus=document.activeElement;ov.classList.add('open');document.body.classList.add('apply-lock');setTimeout(function(){document.getElementById('apName').focus()},60);}
+  function closeModal(){ov.classList.remove('open');document.body.classList.remove('apply-lock');if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+
+  // Every "Apply for support" button (header, hero, contact) now opens the form instead of a mailto link
+  document.querySelectorAll('a.btn[href^="mailto:'+TO+'"],[data-apply]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();openModal();});
+  });
+  document.getElementById('applyClose').addEventListener('click',closeModal);
+  document.getElementById('applyDone').addEventListener('click',closeModal);
+  ov.addEventListener('click',function(e){if(e.target===ov)closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ov.classList.contains('open'))closeModal();});
+
+  var chips=Array.prototype.slice.call(document.querySelectorAll('#apPlatforms input'));
+  chips.forEach(function(c){c.addEventListener('change',function(){
+    if(c.value==='None yet'&&c.checked)chips.forEach(function(o){if(o!==c)o.checked=false;});
+    else if(c.checked)chips[0].checked=false;
+    chips.forEach(function(o){o.parentNode.classList.toggle('on',o.checked);});
+  });});
+
+  function collect(){
+    var d={platforms:[]},fd=new FormData(form);
+    fd.forEach(function(v,k){if(k==='platforms')d.platforms.push(v);else d[k]=String(v).trim();});
+    d.platforms=d.platforms.join(', ')||'None listed';
+    return d;
+  }
+  function showErr(m){status.textContent=m;status.className='apply-status err';}
+  function clearErr(){status.textContent='';status.className='apply-status';}
+  function done(d){document.getElementById('applySentTo').textContent=d.email;panel.classList.add('sent');}
+  function resetForm(){form.reset();chips.forEach(function(o){o.parentNode.classList.remove('on');});}
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();clearErr();
+    if(!form.checkValidity()){form.reportValidity();return;}
+    var d=collect();
+    if(d._honey)return;                     // bot filled the hidden field -> ignore silently
+    submit.disabled=true;submit.textContent='Sending…';
+    fetch(ENDPOINT,{
+      method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify({
+        _subject:'Support application — '+d.name+' ('+d.country+')',
+        _template:'table',
+        _replyto:d.email,
+        name:d.name,email:d.email,country:d.country,languages:d.languages,
+        experience:d.experience,platforms:d.platforms,setup:d.setup||'—',message:d.message||'—',
+        source:'supaworkers.com apply form'
+      })
+    }).then(function(r){return r.json();}).then(function(j){
+      if(String(j.success)!=='true')throw new Error(j.message||'send failed');
+      done(d);resetForm();
+    }).catch(function(){
+      // Network/service problem: open their email app with everything pre-filled so no application is lost
+      sendViaMailto(d);
+    }).then(function(){submit.disabled=false;submit.textContent='Send application';});
+  });
+
+  function sendViaMailto(d){
+    var body='Hello SupaWorkers,\n\nI\'d like support getting started on AI training platforms.\n\n'
+      +'Name: '+d.name+'\nEmail: '+d.email+'\nCountry: '+d.country+'\nLanguages: '+d.languages+'\n\n'
+      +'Experience/skills:\n'+d.experience+'\n\n'
+      +'Platforms I already use: '+d.platforms+'\nSetup: '+(d.setup||'—')+'\n\n'
+      +(d.message?'Notes:\n'+d.message+'\n\n':'')+'Thanks,\n'+d.name;
+    window.location.href='mailto:'+TO+'?subject='+encodeURIComponent('Support application — '+d.name+' ('+d.country+')')+'&body='+encodeURIComponent(body);
+    document.getElementById('applyOkTitle').textContent='Your email app should open.';
+    document.getElementById('applyOkText').innerHTML='Everything is filled in — just press <b>Send</b>. If nothing opened, email us at <b>'+TO+'</b>.';
+    done(d);
+  }
+})();
 </script>
 </body>
 </html>

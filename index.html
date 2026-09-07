@@ -285,12 +285,12 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-heigh
 .apply-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:26px;padding-top:20px;border-top:1px solid var(--hair)}
 .apply-foot .note{font-size:12.5px;color:var(--muted)}
 .apply-status{margin-top:16px;font-size:14px;padding:12px 14px;border-radius:2px;display:none}
-.apply-status.err{display:block;background:#FBEDEA;color:#8A2C1F;border:1px solid #EFC7BF}.apply-status p{margin:0}.apply-status .apply-alt{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px}.apply-status .apply-alt .btn{font-size:13px;padding:9px 16px}.apply-status .small{font-size:12.5px;color:#8A2C1F;opacity:.85}.apply-status .small b{user-select:all}
+.apply-status.err{display:block;background:#FBEDEA;color:#8A2C1F;border:1px solid #EFC7BF}
 .apply-success{text-align:center;padding:28px 8px 12px;display:none}
 .apply-success .tick{width:52px;height:52px;border:1px solid var(--green);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--green);font-size:24px;margin-bottom:18px}
 .apply-success h3{font-size:26px;margin-bottom:10px}
 .apply-success p{color:var(--ink-soft);font-size:15px;max-width:400px;margin:0 auto 22px}
-.apply-panel.sent form{display:none}
+.apply-success p{margin-bottom:18px}.apply-ok-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:14px}.apply-ok-fine{font-size:12.5px;color:var(--muted);max-width:360px;margin:0 auto 18px}.apply-ok-fine b{user-select:all}.apply-ok-close{background:none;border:0;font:600 13.5px var(--sans);color:var(--muted);cursor:pointer;text-decoration:underline;text-underline-offset:3px}.apply-ok-close:hover{color:var(--ink)}.apply-panel.sent form{display:none}
 .apply-panel.sent .apply-success{display:block}
 .apply-hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
 body.apply-lock{overflow:hidden}
@@ -836,9 +836,14 @@ body.apply-lock{overflow:hidden}
 
     <div class="apply-success">
       <div class="tick">✓</div>
-      <h3 id="applyOkTitle">Application received.</h3>
-      <p id="applyOkText">Thanks — we'll reply to <b id="applySentTo"></b> within one business day with an honest read on what's realistic for you.</p>
-      <button class="btn btn-outline" type="button" id="applyDone">Close</button>
+      <h3 id="applyOkTitle">Your email app should open.</h3>
+      <p id="applyOkText">Your application to <b>info@supaworkers.com</b> is written and ready — just press <b>Send</b> in your email app. We'll reply within one business day.</p>
+      <div class="apply-ok-actions">
+        <a class="btn btn-solid" id="applyAgain" href="#">Open my email app again</a>
+        <button class="btn btn-outline" type="button" id="applyCopy">Copy my application</button>
+      </div>
+      <p class="apply-ok-fine">Nothing opened? Copy your application and paste it into any email to <b>info@supaworkers.com</b>.</p>
+      <button class="apply-ok-close" type="button" id="applyDone">Close</button>
     </div>
   </div>
 </div>
@@ -846,7 +851,6 @@ body.apply-lock{overflow:hidden}
 <script>
 (function(){
   var TO="info@supaworkers.com";
-  var ENDPOINT="https://formsubmit.co/ajax/"+TO;   // free, no key. First submission triggers a one-time "Activate" email to this inbox.
 
   var ov=document.getElementById('applyOverlay'),panel=document.getElementById('applyPanel'),
       form=document.getElementById('applyForm'),status=document.getElementById('applyStatus'),
@@ -860,7 +864,6 @@ body.apply-lock{overflow:hidden}
     a.addEventListener('click',function(e){e.preventDefault();openModal();});
   });
   document.getElementById('applyClose').addEventListener('click',closeModal);
-  document.getElementById('applyDone').addEventListener('click',closeModal);
   ov.addEventListener('click',function(e){if(e.target===ov)closeModal();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ov.classList.contains('open'))closeModal();});
 
@@ -874,19 +877,14 @@ body.apply-lock{overflow:hidden}
   function collect(){
     var d={platforms:[]},fd=new FormData(form);
     fd.forEach(function(v,k){if(k==='platforms')d.platforms.push(v);else d[k]=String(v).trim();});
-    d.platforms=d.platforms.join(', ')||'None listed';
+    d.platforms=d.platforms.join(', ')||'None yet';
     return d;
   }
-  function showErr(m){status.textContent=m;status.className='apply-status err';}
-  function clearErr(){status.textContent='';status.className='apply-status';}
-  function done(d){document.getElementById('applySentTo').textContent=d.email;panel.classList.add('sent');}
-  function resetForm(){form.reset();chips.forEach(function(o){o.parentNode.classList.remove('on');});}
-
   function mailBody(d){
     return 'Hello SupaWorkers,\n\nI\'d like support getting started on AI training platforms.\n\n'
       +'Name: '+d.name+'\nEmail: '+d.email+'\nCountry: '+d.country+'\nLanguages: '+d.languages+'\n\n'
       +'Experience/skills:\n'+d.experience+'\n\n'
-      +'Platforms I already use: '+d.platforms+'\nSetup: '+(d.setup||'—')+'\n\n'
+      +'Platforms I already use: '+d.platforms+'\nSetup: '+(d.setup||'Not specified')+'\n\n'
       +(d.message?'Notes:\n'+d.message+'\n\n':'')+'Thanks,\n'+d.name;
   }
   function mailtoHref(d){
@@ -898,49 +896,24 @@ body.apply-lock{overflow:hidden}
     var legacy=function(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok();}catch(_){}document.body.removeChild(ta);};
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,legacy);}else legacy();
   }
-  // Honest failure state: keep their answers, give them two working ways to get it to us.
-  function fail(d,msg){
-    status.innerHTML='<p>'+msg+'</p>'
-      +'<div class="apply-alt"><a class="btn btn-solid" href="'+mailtoHref(d)+'">Open in my email app</a>'
-      +'<button type="button" class="btn btn-outline" id="applyCopy">Copy my application</button></div>'
-      +'<p class="small">Send it to <b>'+TO+'</b> — your answers are still filled in above.</p>';
-    status.className='apply-status err';
-    document.getElementById('applyCopy').addEventListener('click',function(){copyText(mailBody(d),this);});
-    if(status.scrollIntoView)status.scrollIntoView({behavior:'smooth',block:'nearest'});
-  }
 
+  var current=null;
   form.addEventListener('submit',function(e){
-    e.preventDefault();clearErr();
+    e.preventDefault();
     if(!form.checkValidity()){form.reportValidity();return;}
     var d=collect();
-    if(d._honey)return;                     // bot filled the hidden field -> ignore silently
-    submit.disabled=true;submit.textContent='Sending…';
-    var ctrl=('AbortController' in window)?new AbortController():null;
-    var timer=ctrl?setTimeout(function(){ctrl.abort();},15000):null;
-    fetch(ENDPOINT,{
-      method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
-      signal:ctrl?ctrl.signal:undefined,
-      body:JSON.stringify({
-        _subject:'Support application — '+d.name+' ('+d.country+')',
-        _template:'table',
-        _replyto:d.email,
-        name:d.name,email:d.email,country:d.country,languages:d.languages,
-        experience:d.experience,platforms:d.platforms,setup:d.setup||'—',message:d.message||'—',
-        source:'supaworkers.com apply form'
-      })
-    }).then(function(r){
-      return r.text().then(function(t){var j={};try{j=JSON.parse(t);}catch(_){}return {j:j,t:t,code:r.status};});
-    }).then(function(res){
-      if(String(res.j.success)==='true'){done(d);resetForm();return;}
-      var m=String(res.j.message||res.t||'');
-      if(window.console)console.warn('Apply form — service replied:',res.code,m);
-      fail(d,/activat/i.test(m)
-        ?"Our form service is still being switched on, so this didn't go through automatically. Please use one of the options below and we'll receive it straight away."
-        :"This didn't go through automatically. Please use one of the options below and we'll receive it straight away.");
-    }).catch(function(err){
-      if(window.console)console.warn('Apply form — network error:',err);
-      fail(d,"We couldn't reach our form service just now. Please use one of the options below and we'll receive it straight away.");
-    }).then(function(){if(timer)clearTimeout(timer);submit.disabled=false;submit.textContent='Send application';});
+    if(d._honey)return;                    // bot filled the hidden field -> ignore
+    current=d;
+    var href=mailtoHref(d);
+    document.getElementById('applyAgain').setAttribute('href',href);
+    panel.classList.add('sent');           // show the "press Send" screen
+    panel.scrollTop=0; ov.scrollTop=0;
+    window.location.href=href;             // open their email app with the application written out
+  });
+  document.getElementById('applyCopy').addEventListener('click',function(){ if(current) copyText(mailBody(current),this); });
+  document.getElementById('applyDone').addEventListener('click',function(){
+    // fresh form for next time
+    panel.classList.remove('sent'); form.reset(); chips.forEach(function(o){o.parentNode.classList.remove('on');}); current=null; closeModal();
   });
 })();
 </script>

@@ -58,7 +58,8 @@
   html{scroll-behavior:smooth}
   section[id]{scroll-margin-top:86px}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased}
+  html,body{overflow-x:clip}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased}
   ::selection{background:var(--green);color:var(--paper)}
   a{color:var(--green);text-decoration:none}
   a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}
@@ -112,10 +113,10 @@
   .stuck-item span{font-size:13.5px;color:var(--muted)}
 
   /* ---------- logo marquee ---------- */
-  .strip{border-bottom:1px solid var(--hair);background:var(--paper-2)}
+  .strip{border-bottom:1px solid var(--hair);background:var(--paper-2);overflow:hidden}
   .strip-inner{display:flex;align-items:center;gap:28px;padding:22px 0}
   .strip .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
-  .marquee{overflow:hidden;flex:1;position:relative;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+  .marquee{overflow:hidden;flex:1;min-width:0;width:100%;max-width:100%;position:relative;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
   .mq-track{display:flex;align-items:center;gap:52px;width:max-content;animation:mq 46s linear infinite}
   .marquee:hover .mq-track{animation-play-state:paused}
   @keyframes mq{to{transform:translateX(-50%)}}
@@ -242,7 +243,7 @@
     .row{grid-template-columns:1fr;gap:14px;padding:32px 0}
     .row .idx{padding-top:0}
     .plat-grid{grid-template-columns:repeat(2,1fr)}
-    .strip-inner{flex-direction:column;gap:14px}
+    .strip-inner{flex-direction:column;align-items:stretch;gap:14px}.strip .lbl{display:block;text-align:left}
   }
   @media (max-width:760px){
     nav.main{display:none}

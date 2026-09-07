@@ -284,7 +284,7 @@
 .apply-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:26px;padding-top:20px;border-top:1px solid var(--hair)}
 .apply-foot .note{font-size:12.5px;color:var(--muted)}
 .apply-status{margin-top:16px;font-size:14px;padding:12px 14px;border-radius:2px;display:none}
-.apply-status.err{display:block;background:#FBEDEA;color:#8A2C1F;border:1px solid #EFC7BF}
+.apply-status.err{display:block;background:#FBEDEA;color:#8A2C1F;border:1px solid #EFC7BF}.apply-status p{margin:0}.apply-status .apply-alt{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px}.apply-status .apply-alt .btn{font-size:13px;padding:9px 16px}.apply-status .small{font-size:12.5px;color:#8A2C1F;opacity:.85}.apply-status .small b{user-select:all}
 .apply-success{text-align:center;padding:28px 8px 12px;display:none}
 .apply-success .tick{width:52px;height:52px;border:1px solid var(--green);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--green);font-size:24px;margin-bottom:18px}
 .apply-success h3{font-size:26px;margin-bottom:10px}
@@ -881,14 +881,44 @@ body.apply-lock{overflow:hidden}
   function done(d){document.getElementById('applySentTo').textContent=d.email;panel.classList.add('sent');}
   function resetForm(){form.reset();chips.forEach(function(o){o.parentNode.classList.remove('on');});}
 
+  function mailBody(d){
+    return 'Hello SupaWorkers,\n\nI\'d like support getting started on AI training platforms.\n\n'
+      +'Name: '+d.name+'\nEmail: '+d.email+'\nCountry: '+d.country+'\nLanguages: '+d.languages+'\n\n'
+      +'Experience/skills:\n'+d.experience+'\n\n'
+      +'Platforms I already use: '+d.platforms+'\nSetup: '+(d.setup||'—')+'\n\n'
+      +(d.message?'Notes:\n'+d.message+'\n\n':'')+'Thanks,\n'+d.name;
+  }
+  function mailtoHref(d){
+    return 'mailto:'+TO+'?subject='+encodeURIComponent('Support application — '+d.name+' ('+d.country+')')+'&body='+encodeURIComponent(mailBody(d));
+  }
+  function copyText(t,btn){
+    var label=btn.textContent;
+    var ok=function(){btn.textContent='Copied ✓';setTimeout(function(){btn.textContent=label},2200);};
+    var legacy=function(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok();}catch(_){}document.body.removeChild(ta);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,legacy);}else legacy();
+  }
+  // Honest failure state: keep their answers, give them two working ways to get it to us.
+  function fail(d,msg){
+    status.innerHTML='<p>'+msg+'</p>'
+      +'<div class="apply-alt"><a class="btn btn-solid" href="'+mailtoHref(d)+'">Open in my email app</a>'
+      +'<button type="button" class="btn btn-outline" id="applyCopy">Copy my application</button></div>'
+      +'<p class="small">Send it to <b>'+TO+'</b> — your answers are still filled in above.</p>';
+    status.className='apply-status err';
+    document.getElementById('applyCopy').addEventListener('click',function(){copyText(mailBody(d),this);});
+    if(status.scrollIntoView)status.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+
   form.addEventListener('submit',function(e){
     e.preventDefault();clearErr();
     if(!form.checkValidity()){form.reportValidity();return;}
     var d=collect();
     if(d._honey)return;                     // bot filled the hidden field -> ignore silently
     submit.disabled=true;submit.textContent='Sending…';
+    var ctrl=('AbortController' in window)?new AbortController():null;
+    var timer=ctrl?setTimeout(function(){ctrl.abort();},15000):null;
     fetch(ENDPOINT,{
       method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+      signal:ctrl?ctrl.signal:undefined,
       body:JSON.stringify({
         _subject:'Support application — '+d.name+' ('+d.country+')',
         _template:'table',
@@ -897,26 +927,20 @@ body.apply-lock{overflow:hidden}
         experience:d.experience,platforms:d.platforms,setup:d.setup||'—',message:d.message||'—',
         source:'supaworkers.com apply form'
       })
-    }).then(function(r){return r.json();}).then(function(j){
-      if(String(j.success)!=='true')throw new Error(j.message||'send failed');
-      done(d);resetForm();
-    }).catch(function(){
-      // Network/service problem: open their email app with everything pre-filled so no application is lost
-      sendViaMailto(d);
-    }).then(function(){submit.disabled=false;submit.textContent='Send application';});
+    }).then(function(r){
+      return r.text().then(function(t){var j={};try{j=JSON.parse(t);}catch(_){}return {j:j,t:t,code:r.status};});
+    }).then(function(res){
+      if(String(res.j.success)==='true'){done(d);resetForm();return;}
+      var m=String(res.j.message||res.t||'');
+      if(window.console)console.warn('Apply form — service replied:',res.code,m);
+      fail(d,/activat/i.test(m)
+        ?"Our form service is still being switched on, so this didn't go through automatically. Please use one of the options below and we'll receive it straight away."
+        :"This didn't go through automatically. Please use one of the options below and we'll receive it straight away.");
+    }).catch(function(err){
+      if(window.console)console.warn('Apply form — network error:',err);
+      fail(d,"We couldn't reach our form service just now. Please use one of the options below and we'll receive it straight away.");
+    }).then(function(){if(timer)clearTimeout(timer);submit.disabled=false;submit.textContent='Send application';});
   });
-
-  function sendViaMailto(d){
-    var body='Hello SupaWorkers,\n\nI\'d like support getting started on AI training platforms.\n\n'
-      +'Name: '+d.name+'\nEmail: '+d.email+'\nCountry: '+d.country+'\nLanguages: '+d.languages+'\n\n'
-      +'Experience/skills:\n'+d.experience+'\n\n'
-      +'Platforms I already use: '+d.platforms+'\nSetup: '+(d.setup||'—')+'\n\n'
-      +(d.message?'Notes:\n'+d.message+'\n\n':'')+'Thanks,\n'+d.name;
-    window.location.href='mailto:'+TO+'?subject='+encodeURIComponent('Support application — '+d.name+' ('+d.country+')')+'&body='+encodeURIComponent(body);
-    document.getElementById('applyOkTitle').textContent='Your email app should open.';
-    document.getElementById('applyOkText').innerHTML='Everything is filled in — just press <b>Send</b>. If nothing opened, email us at <b>'+TO+'</b>.';
-    done(d);
-  }
 })();
 </script>
 </body>
